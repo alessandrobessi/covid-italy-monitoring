@@ -116,19 +116,21 @@ if __name__ == '__main__':
         ax1.plot(dates_forecast, infected_forecast, '*-', label='forecast')
         ax1.plot(dates, infected, 'o-', label='actual')
 
-        ax1.set_title(f'infected in next 30 days\nw/ the current growth rate {growth_rate[-1]:.2f}')
+        ax1.set_title(f'infected in the next 30 days\nw/ the current growth rate'
+                      f' {growth_rate[-1]:.2f}')
         ax1.legend(loc='upper left')
 
         ax2.plot(dates_forecast, infected_forecast_optimistic, '*-', label='forecast')
         ax2.plot(dates, infected, 'o-', label='actual')
-        ax2.set_title(f'infected in next 30 days\nw/ growth rate'
+        ax2.set_title(f'infected in the next 30 days\nw/ growth rate'
                       f' {growth_rate[-1] - 0.05:.2f}\n('
                       f'optimistic)')
         ax2.legend(loc='upper left')
 
         ax3.plot(dates_forecast, infected_forecast_pessimistic, '*-', label='forecast')
         ax3.plot(dates, infected, 'o-', label='actual')
-        ax3.set_title(f'infected in next 30 days\nw/ growth rate {growth_rate[-1] + 0.05:.2f}\n('
+        ax3.set_title(f'infected in the next 30 days\nw/ growth rate'
+                      f' {growth_rate[-1] + 0.05:.2f}\n('
                       f'pessimistic)')
         ax3.legend(loc='upper left')
 
