@@ -128,7 +128,7 @@ if __name__ == '__main__':
         ax3.plot(dates, infected, 'o-', label='total infected')
         ax3.plot(dates_forecast_10days, infected_forecast_10days, '--',
                  label=f'forecast')
-        ax3.set_title('forecast next 10 days\nw/ growth rate {growth_rate[-1]:.2f}')
+        ax3.set_title(f'forecast next 10 days\nw/ growth rate {growth_rate[-1]:.2f}')
         ax3.legend(loc='upper left')
 
         plt.show()
