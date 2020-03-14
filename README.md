@@ -2,10 +2,12 @@
 A script to visualize some statistics about the CoVid-19 epidemics in Italy
 
 ### Usage
+Install Humor Sans font: http://antiyawn.com/uploads/humorsans.html
 ```shell script
 pip install -r requirements.txt
 python3 main.py
 ```
+
 
 ## Example
 The script produces the following report:
