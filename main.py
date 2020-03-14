@@ -39,23 +39,19 @@ if __name__ == '__main__':
     avg_growth_rate = moving_average(growth_rate, 5)
 
     # forecast
-    infected_forecast_3days = infected_list.copy()
-    infected_forecast_5days = infected_list.copy()
-    infected_forecast_10days = infected_list.copy()
+    infected_forecast = infected_list.copy()
+    infected_forecast_optimistic = infected_list.copy()
+    infected_forecast_pessimistic = infected_list.copy()
+    dates_forecast = dates.copy()
 
-    dates_forecast_3days = dates.copy()
-    dates_forecast_5days = dates.copy()
-    dates_forecast_10days = dates.copy()
-
-    for _ in range(3):
-        infected_forecast_3days.append(infected_forecast_3days[-1] * (1 + growth_rate[-1]))
-        dates_forecast_3days.append(dates_forecast_3days[-1] + timedelta(days=1))
-    for _ in range(5):
-        infected_forecast_5days.append(infected_forecast_5days[-1] * (1 + growth_rate[-1]))
-        dates_forecast_5days.append(dates_forecast_5days[-1] + timedelta(days=1))
     for _ in range(10):
-        infected_forecast_10days.append(infected_forecast_10days[-1] * (1 + growth_rate[-1]))
-        dates_forecast_10days.append(dates_forecast_10days[-1] + timedelta(days=1))
+        infected_forecast.append(infected_forecast[-1] * (1 + growth_rate[-1]))
+        infected_forecast_optimistic.append(
+            infected_forecast_optimistic[-1] * (1 + growth_rate[-1] - 0.05))
+        infected_forecast_pessimistic.append(
+            infected_forecast_pessimistic[-1] * (1 + growth_rate[-1] + 0.05))
+
+        dates_forecast.append(dates_forecast[-1] + timedelta(days=1))
 
     print("-" * 50)
     print(f"{str(dates[-1])[:10]} Report")
@@ -74,9 +70,9 @@ if __name__ == '__main__':
     print(f"Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is {avg_growth_rate[-1]:.2f})")
     print("-" * 50)
     print(f"Forecast with the current growth rate ({growth_rate[-1]:.2f})")
-    print(f"--- after 3 days: {int(infected_forecast_3days[-1])}")
-    print(f"--- after 5 days: {int(infected_forecast_5days[-1])}")
-    print(f"--- after 10 days: {int(infected_forecast_10days[-1])}")
+    print(f"--- after 3 days: {int(infected_forecast[-8])}")
+    print(f"--- after 5 days: {int(infected_forecast[-6])}")
+    print(f"--- after 10 days: {int(infected_forecast[-1])}")
 
     plt.rc('lines', linewidth=3, markersize=8)
     plt.rc('font', size=12)
@@ -117,22 +113,23 @@ if __name__ == '__main__':
 
         fig.autofmt_xdate()
 
-        ax1.plot(dates, infected, 'o-', label='total infected')
-        ax1.plot(dates_forecast_3days, infected_forecast_3days, '--',
-                 label='forecast')
-        ax1.set_title(f'forecast next 3 days\nw/ growth rate {growth_rate[-1]:.2f}')
+        ax1.plot(dates_forecast, infected_forecast, '*-', label='forecast')
+        ax1.plot(dates, infected, 'o-', label='actual')
+
+        ax1.set_title(f'infected in next 30 days\nw/ the current growth rate {growth_rate[-1]:.2f}')
         ax1.legend(loc='upper left')
 
-        ax2.plot(dates, infected, 'o-', label='total infected')
-        ax2.plot(dates_forecast_5days, infected_forecast_5days, '--',
-                 label='forecast')
-        ax2.set_title(f'forecast next 5 days\nw/ growth rate {growth_rate[-1]:.2f}')
+        ax2.plot(dates_forecast, infected_forecast_optimistic, '*-', label='forecast')
+        ax2.plot(dates, infected, 'o-', label='actual')
+        ax2.set_title(f'infected in next 30 days\nw/ growth rate'
+                      f' {growth_rate[-1] - 0.05:.2f}\n('
+                      f'optimistic)')
         ax2.legend(loc='upper left')
 
-        ax3.plot(dates, infected, 'o-', label='total infected')
-        ax3.plot(dates_forecast_10days, infected_forecast_10days, '--',
-                 label=f'forecast')
-        ax3.set_title(f'forecast next 10 days\nw/ growth rate {growth_rate[-1]:.2f}')
+        ax3.plot(dates_forecast, infected_forecast_pessimistic, '*-', label='forecast')
+        ax3.plot(dates, infected, 'o-', label='actual')
+        ax3.set_title(f'infected in next 30 days\nw/ growth rate {growth_rate[-1] + 0.05:.2f}\n('
+                      f'pessimistic)')
         ax3.legend(loc='upper left')
 
         plt.show()
