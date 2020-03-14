@@ -1,3 +1,4 @@
+import json
 from datetime import datetime, timedelta
 
 import matplotlib.pyplot as plt
@@ -16,8 +17,11 @@ if __name__ == '__main__':
                             '/dpc-covid19-ita-andamento-nazionale.json')
     if raw_data.status_code != 200:
         raise FileNotFoundError('File not found. Check data URL.')
-
-    data = raw_data.json()
+    try:
+        data = raw_data.json()
+    except json.decoder.JSONDecodeError:
+        decoded_data = raw_data.content.decode('utf-8-sig')
+        data = json.loads(decoded_data)
 
     dates = [datetime.strptime(d['data'][:10], '%Y-%m-%d') for d in data]
     infected_list = [d['totale_casi'] for d in data]
