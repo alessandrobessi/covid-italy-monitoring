@@ -88,7 +88,7 @@ if __name__ == '__main__':
         f.write(f"- *hospitalized individuals in ICU* are {icus[-1]}\n")
         f.write(f"- home isolated individuals are {isolated[-1]}\n")
         f.write("\n")
-        f.write(f"##### Number of new infected is {new_infected}\n")
+        f.write(f"##### New infected individuals are {new_infected}\n")
         f.write("\n")
         f.write(f"##### Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is"
                 f" {avg_growth_rate[-1]:.2f})\n")

@@ -14,7 +14,7 @@ CoVid-19 Italy Monitoring
 - *hospitalized individuals in ICU* are 1518
 - home isolated individuals are 7860
 
-##### Number of new infected is 3497
+##### New infected individuals are 3497
 
 ##### Growth rate is 0.20 (5 days smoothing is 0.18)
 ![stats][stats]
