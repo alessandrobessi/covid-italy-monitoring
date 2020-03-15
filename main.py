@@ -88,7 +88,7 @@ if __name__ == '__main__':
         f.write("Infected | Recovered | Dead\n")
         f.write(":---: | :---: | :---:\n")
         f.write(f"*{currently_infected[-1]}* | *{recovered[-1]}* | *{dead[-1]}*\n")
-        f.write(f"*Total number of tested individuals is {tested[-1]}*\n")
+        f.write(f"\n*Total number of tested individuals is {tested[-1]}*\n")
         f.write("***\n")
         f.write(f"##### Current number of infected individuals is {currently_infected[-1]}\n")
         f.write("hospitalized | in ICU | home isolation\n")

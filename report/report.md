@@ -8,6 +8,7 @@ CoVid-19 Italy Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *17750* | *1966* | *1441*
+
 *Total number of tested individuals is 109170*
 ***
 ##### Current number of infected individuals is 17750
