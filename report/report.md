@@ -11,7 +11,7 @@ CoVid-19 Italy Monitoring
 
 ##### Current number of infected individuals is 17750
 - *hospitalized individuals* are 8372
-- *hospitalized individuals are ICU* is 1518
+- *hospitalized individuals in ICU* are 1518
 - home isolated individuals are 7860
 
 ##### Number of new infected is 3497
