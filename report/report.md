@@ -2,6 +2,7 @@
 
 # 2020-03-14
 CoVid-19 Italy Monitoring
+</div>
 
 ##### Total number of infected individuals is 21157 (+3497)
 Infected | Recovered | Dead
@@ -51,7 +52,6 @@ after 3 days | after 5 days | after 10 days
 
 ![dynamic_forecast][dynamic_forecast]
 
-</div>
 [stats]: stats.png
 [static_forecast]: static_forecast.png
 [dynamic_forecast]: dynamic_forecast.png
