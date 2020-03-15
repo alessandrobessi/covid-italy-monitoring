@@ -80,7 +80,7 @@ if __name__ == '__main__':
     with plt.xkcd():
         fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(nrows=2, ncols=3, figsize=(15, 15))
 
-        fig.suptitle(f'{str(dates[-1])[:10]} REPORT', fontsize=16)
+        fig.suptitle(f'{str(dates[-1])[:10]} REPORT', fontsize=24, fontweight='bold')
 
         ax1.plot(dates, infected, 'o-', label='total infected')
         ax1.plot(dates, recovered, 'o-', label='total recovered')
@@ -112,7 +112,7 @@ if __name__ == '__main__':
 
     with plt.xkcd():
         fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15))
-        fig.suptitle(f'{str(dates[-1])[:10]} FORECAST', fontsize=16)
+        fig.suptitle(f'{str(dates[-1])[:10]} FORECAST', fontsize=24, fontweight='bold')
 
         fig.autofmt_xdate()
 
