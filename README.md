@@ -2,7 +2,7 @@
 
 # CoVid-19 Italy Monitoring
 
-A script to visualize some statistics and predictions about the CoVid-19 epidemics in Italy
+A script to visualize some statistics and predictions about the CoVid-19 epidemics in Italy.
 </div>
 
 ### Usage
@@ -15,4 +15,4 @@ Then run
 ```shell script
 python3 main.py
 ```
-You find the report in [report.md](report/report.md).
+You find a report with statistics, predictions, and images in [report.md](report/report.md).
