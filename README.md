@@ -1,5 +1,9 @@
-# covid-italy-monitoring
+<div align="center">
+
+# CoVid-19 Italy Monitoring
+
 A script to visualize some statistics and predictions about the CoVid-19 epidemics in Italy
+</div>
 
 ### Usage
 Install Humor Sans font: http://antiyawn.com/uploads/humorsans.html
