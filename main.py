@@ -160,7 +160,7 @@ if __name__ == '__main__':
         ax6.plot(dates, tested, 'o-', label='total tested')
         ax6.legend(loc='upper left')
 
-        plt.savefig('report/stats.png', bbox_inches='tight')
+        plt.savefig('report/stats.png')
 
     with plt.xkcd():
         fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15))
@@ -188,7 +188,7 @@ if __name__ == '__main__':
                       f'pessimistic)')
         ax3.legend(loc='upper left')
 
-        plt.savefig('report/static_forecast.png', bbox_inches='tight')
+        plt.savefig('report/static_forecast.png')
 
     with plt.xkcd():
         fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15))
@@ -213,4 +213,4 @@ if __name__ == '__main__':
                       f'super optimistic)')
         ax3.legend(loc='upper left')
 
-        plt.savefig('report/dynamic_forecast.png', bbox_inches='tight')
+        plt.savefig('report/dynamic_forecast.png')
