@@ -163,7 +163,7 @@ if __name__ == '__main__':
         plt.savefig('report/stats.png')
 
     with plt.xkcd():
-        fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15))
+        fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15), sharey=True)
 
         fig.autofmt_xdate()
 
@@ -189,7 +189,7 @@ if __name__ == '__main__':
         plt.savefig('report/static_forecast.png')
 
     with plt.xkcd():
-        fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15))
+        fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15), sharey=True)
 
         fig.autofmt_xdate()
 
