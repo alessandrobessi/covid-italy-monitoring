@@ -120,6 +120,7 @@ if __name__ == '__main__':
         f.write(f"*{int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 3))}* |")
         f.write(f"*{int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 5))}* |")
         f.write(f"*{int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 10))}* \n")
+        f.write("\n")
         f.write("\n![static_forecast][static_forecast]\n")
         f.write("\n")
         f.write(f"##### Dynamic forecast with a slow decreasing growth rate\n")
