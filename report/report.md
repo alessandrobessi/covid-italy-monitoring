@@ -17,6 +17,8 @@ CoVid-19 Italy Monitoring
 ##### New infected individuals are 3497
 
 ##### Growth rate is 0.20 (5 days smoothing is 0.18)
+- *time to 2x* is 3.84 days
+- *time to 10x* is 12.74 days
 ![stats][stats]
 ##### Static forecast (growth rate = 0.15)
 - after 3 days: 32011

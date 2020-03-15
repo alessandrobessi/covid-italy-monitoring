@@ -40,6 +40,12 @@ if __name__ == '__main__':
     growth_rate = (infected[1:] - infected[:-1]) / infected[:-1]
     avg_growth_rate = moving_average(growth_rate, 5)
 
+    # x = (1 + growth_rate)^t
+    # log(x) = t * log(1 + growth_rate)
+    # t = log(x) / log(1 + growth_rate)
+    time_to_2x = math.log(2) / math.log(1 + growth_rate[-1])
+    time_to_10x = math.log(10) / math.log(1 + growth_rate[-1])
+
     # static forecast
     infected_forecast = infected_list.copy()
     infected_forecast_optimistic = infected_list.copy()
@@ -92,6 +98,8 @@ if __name__ == '__main__':
         f.write("\n")
         f.write(f"##### Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is"
                 f" {avg_growth_rate[-1]:.2f})\n")
+        f.write(f"- *time to 2x* is {time_to_2x:.2f} days\n")
+        f.write(f"- *time to 10x* is {time_to_10x:.2f} days\n")
         f.write("![stats][stats]\n")
         f.write(f"##### Static forecast (growth rate = {growth_rate[-1] - 0.05:.2f})\n")
         f.write(f"- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 3))}\n")
