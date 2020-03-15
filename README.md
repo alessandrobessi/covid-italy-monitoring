@@ -13,7 +13,7 @@ python3 main.py
 ```
 
 
-## Example
+### Example
 The script produces the following report:
 ```
 --------------------------------------------------
