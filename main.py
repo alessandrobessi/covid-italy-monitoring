@@ -163,52 +163,40 @@ if __name__ == '__main__':
         plt.savefig('report/stats.png')
 
     with plt.xkcd():
-        fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15), sharey=True)
+        fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
 
         fig.autofmt_xdate()
 
-        ax1.plot(dates_forecast, infected_forecast_optimistic, '*-', label='forecast')
-        ax1.plot(dates, infected, 'o-', label='actual')
-        ax1.set_title(f'infected in the next 10 days\nw/ growth rate'
-                      f' {growth_rate[-1] - 0.05:.2f}\n(optimistic)')
-        ax1.legend(loc='upper left')
+        ax.plot(dates_forecast, infected_forecast_optimistic, '*-',
+                label='forecast w/ growth rate '
+                      f'{growth_rate[-1] - 0.05:.2f}\n(optimistic)')
+        ax.plot(dates_forecast, infected_forecast, 's-',
+                label='forecast w/ the current growth rate'
+                      f'\n(pessimistic)')
+        ax.plot(dates_forecast, infected_forecast_pessimistic, 'v-',
+                label='forecast w/ growth rate '
+                      f'{growth_rate[-1] + 0.05:.2f}\n(super pessimistic)')
 
-        ax2.plot(dates_forecast, infected_forecast, '*-', label='forecast')
-        ax2.plot(dates, infected, 'o-', label='actual')
-
-        ax2.set_title(f'infected in the next 10 days\nw/ the current growth rate'
-                      f' {growth_rate[-1]:.2f}\n(pessimistic)')
-        ax2.legend(loc='upper left')
-
-        ax3.plot(dates_forecast, infected_forecast_pessimistic, '*-', label='forecast')
-        ax3.plot(dates, infected, 'o-', label='actual')
-        ax3.set_title(f'infected in the next 10 days\nw/ growth rate'
-                      f' {growth_rate[-1] + 0.05:.2f}\n(super pessimistic)')
-        ax3.legend(loc='upper left')
+        ax.plot(dates, infected, 'o-', label='actual')
+        ax.set_title(f'infected in the next 10 days')
+        ax.legend(loc='upper left')
 
         plt.savefig('report/static_forecast.png')
 
     with plt.xkcd():
-        fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15), sharey=True)
+        fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
 
         fig.autofmt_xdate()
 
-        ax1.plot(dates_dyn_forecast, infected_dyn_forecast, '*-', label='forecast')
-        ax1.plot(dates, infected, 'o-', label='actual')
+        ax.plot(dates_dyn_forecast, infected_dyn_forecast, '*-',
+                label='forecast w/ a decreasing growth rate (expected)')
+        ax.plot(dates_dyn_forecast, infected_dyn_forecast_optimistic, 's-',
+                label='forecast w/ a fast decreasing growth rate (optimistic)')
+        ax.plot(dates_dyn_forecast, infected_dyn_forecast_super_optimistic, 'v-',
+                label='forecast w/ a super fast decreasing growth rate (super optimistic)')
+        ax.plot(dates, infected, 'o-', label='actual')
 
-        ax1.set_title(f'infected in the next 10 days\nw/ a decreasing\ngrowth rate\n(expected)')
-        ax1.legend(loc='upper left')
-
-        ax2.plot(dates_dyn_forecast, infected_dyn_forecast_optimistic, '*-', label='forecast')
-        ax2.plot(dates, infected, 'o-', label='actual')
-        ax2.set_title(f'infected in the next 10 days\nw/ a fast decreasing\ngrowth rate\n('
-                      f'optimistic)')
-        ax2.legend(loc='upper left')
-
-        ax3.plot(dates_dyn_forecast, infected_dyn_forecast_super_optimistic, '*-', label='forecast')
-        ax3.plot(dates, infected, 'o-', label='actual')
-        ax3.set_title(f'infected in the next 10 days\nw/ a super fast decreasing\ngrowth rate\n('
-                      f'super optimistic)')
-        ax3.legend(loc='upper left')
+        ax.set_title(f'infected in the next 10 days')
+        ax.legend(loc='upper left')
 
         plt.savefig('report/dynamic_forecast.png')
