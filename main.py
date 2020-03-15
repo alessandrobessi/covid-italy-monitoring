@@ -109,7 +109,7 @@ if __name__ == '__main__':
             f"- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 10))}\n")
         f.write("![static_forecast][static_forecast]\n")
         f.write("\n")
-        f.write(f"##### Dynamic forecast with a decreasing growth rate\n")
+        f.write(f"##### Dynamic forecast with a slow decreasing growth rate\n")
         f.write(f"- after 3 days: {int(infected_dyn_forecast[-8])}\n")
         f.write(f"- after 5 days: {int(infected_dyn_forecast[-6])}\n")
         f.write(f"- after 10 days: {int(infected_dyn_forecast[-1])}\n")
@@ -189,7 +189,7 @@ if __name__ == '__main__':
         fig.autofmt_xdate()
 
         ax.plot(dates_dyn_forecast, infected_dyn_forecast, '*-',
-                label='forecast w/ a decreasing growth rate (expected)')
+                label='forecast w/ a slow decreasing growth rate (expected)')
         ax.plot(dates_dyn_forecast, infected_dyn_forecast_optimistic, 's-',
                 label='forecast w/ a fast decreasing growth rate (optimistic)')
         ax.plot(dates_dyn_forecast, infected_dyn_forecast_super_optimistic, 'v-',

@@ -32,7 +32,7 @@ CoVid-19 Italy Monitoring
 - after 10 days: 193938
 ![static_forecast][static_forecast]
 
-##### Dynamic forecast with a decreasing growth rate
+##### Dynamic forecast with a slow decreasing growth rate
 - after 3 days: 35779
 - after 5 days: 49390
 - after 10 days: 100111
