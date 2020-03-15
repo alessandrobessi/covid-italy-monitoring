@@ -1,5 +1,6 @@
 import json
 import math
+import pathlib
 from datetime import datetime, timedelta
 
 import matplotlib.pyplot as plt
@@ -71,59 +72,67 @@ if __name__ == '__main__':
 
         dates_dyn_forecast.append(dates_dyn_forecast[-1] + timedelta(days=1))
 
-    print("-" * 50)
-    print(f"{str(dates[-1])[:10]} Report")
-    print("-" * 50)
-    print(f"Total number of infected individuals is {infected[-1]}")
-    print(f"Total number of recovered individuals is {recovered[-1]}")
-    print(f"Total number of dead individuals is {dead[-1]}")
-    print(f"Total number of tested individuals is {tested[-1]}")
-    print("-" * 50)
-    print(f"Current number of infected individuals is {currently_infected[-1]}")
-    print(f"--- hospitalized individuals are {hospitalized[-1]}")
-    print(f"--- hospitalized individuals are ICU is {icus[-1]}")
-    print(f"--- home isolated individuals are {isolated[-1]}")
-    print("-" * 50)
-    print(f"Number of new infected is {new_infected}")
-    print(f"Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is {avg_growth_rate[-1]:.2f})")
-    print("-" * 50)
-    print(f"Static forecast with the current growth rate ({growth_rate[-1]:.2f})")
-    print(f"--- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 3))}")
-    print(f"--- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 5))}")
-    print(f"--- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 10))}")
-    print("-" * 50)
-    print(f"Static forecast (growth rate = {growth_rate[-1] - 0.05:.2f})")
-    print(f"--- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 3))}")
-    print(f"--- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 5))}")
-    print(f"--- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 10))}")
-    print("-" * 50)
-    print(f"Static forecast (growth rate = {growth_rate[-1] + 0.05:.2f})")
-    print(f"--- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 3))}")
-    print(f"--- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 5))}")
-    print(f"--- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 10))}")
-    print("-" * 50)
-    print(f"Dynamic forecast with a decreasing growth rate")
-    print(f"--- after 3 days: {int(infected_dyn_forecast[-8])}")
-    print(f"--- after 5 days: {int(infected_dyn_forecast[-6])}")
-    print(f"--- after 10 days: {int(infected_dyn_forecast[-1])}")
-    print("-" * 50)
-    print(f"Dynamic forecast with a fast decreasing growth rate")
-    print(f"--- after 3 days: {int(infected_dyn_forecast_optimistic[-8])}")
-    print(f"--- after 5 days: {int(infected_dyn_forecast_optimistic[-6])}")
-    print(f"--- after 10 days: {int(infected_dyn_forecast_optimistic[-1])}")
-    print("-" * 50)
-    print(f"Dynamic forecast with a super fast decreasing growth rate")
-    print(f"--- after 3 days: {int(infected_dyn_forecast_super_optimistic[-8])}")
-    print(f"--- after 5 days: {int(infected_dyn_forecast_super_optimistic[-6])}")
-    print(f"--- after 10 days: {int(infected_dyn_forecast_super_optimistic[-1])}")
+    with open(pathlib.Path() / 'report' / 'report.md', 'w') as f:
+        f.write("<div align='center'>\n")
+        f.write(f"# {str(dates[-1])[:10]} Report\n")
+        f.write("CoVid-19 Italy Monitoring\n")
+        f.write("</div>\n")
+        f.write("\n")
+        f.write(f"##### Total number of infected individuals is {infected[-1]}\n")
+        f.write(f"##### Total number of recovered individuals is {recovered[-1]}\n")
+        f.write(f"##### Total number of dead individuals is {dead[-1]}\n")
+        f.write(f"##### Total number of tested individuals is {tested[-1]}\n")
+        f.write("\n")
+        f.write(f"##### Current number of infected individuals is {currently_infected[-1]}\n")
+        f.write(f"- *hospitalized individuals* are {hospitalized[-1]}\n")
+        f.write(f"- *hospitalized individuals are ICU* is {icus[-1]}\n")
+        f.write(f"- home isolated individuals are {isolated[-1]}\n")
+        f.write("\n")
+        f.write(f"##### Number of new infected is {new_infected}\n")
+        f.write("\n")
+        f.write(f"##### Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is"
+                f" {avg_growth_rate[-1]:.2f})\n")
+        f.write("![stats][stats]\n")
+        f.write(f"##### Static forecast with the current growth rate ({growth_rate[-1]:.2f})\n")
+        f.write(f"- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 3))}\n")
+        f.write(f"- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 5))}\n")
+        f.write(f"- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 10))}\n")
+        f.write(f"##### Static forecast (growth rate = {growth_rate[-1] - 0.05:.2f})\n")
+        f.write(f"- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 3))}\n")
+        f.write(f"- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 5))}\n")
+        f.write(
+            f"- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 10))}\n")
+        f.write(f"##### Static forecast (growth rate = {growth_rate[-1] + 0.05:.2f})\n")
+        f.write(f"- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 3))}\n")
+        f.write(f"- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 5))}\n")
+        f.write(
+            f"- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 10))}\n")
+        f.write("![static_forecast][static_forecast]\n")
+        f.write("\n")
+        f.write(f"##### Dynamic forecast with a decreasing growth rate\n")
+        f.write(f"- after 3 days: {int(infected_dyn_forecast[-8])}\n")
+        f.write(f"- after 5 days: {int(infected_dyn_forecast[-6])}\n")
+        f.write(f"- after 10 days: {int(infected_dyn_forecast[-1])}\n")
+        f.write(f"##### Dynamic forecast with a fast decreasing growth rate\n")
+        f.write(f"- after 3 days: {int(infected_dyn_forecast_optimistic[-8])}\n")
+        f.write(f"- after 5 days: {int(infected_dyn_forecast_optimistic[-6])}\n")
+        f.write(f"- after 10 days: {int(infected_dyn_forecast_optimistic[-1])}\n")
+        f.write(f"##### Dynamic forecast with a super fast decreasing growth rate\n")
+        f.write(f"- after 3 days: {int(infected_dyn_forecast_super_optimistic[-8])}\n")
+        f.write(f"- after 5 days: {int(infected_dyn_forecast_super_optimistic[-6])}\n")
+        f.write(f"- after 10 days: {int(infected_dyn_forecast_super_optimistic[-1])}\n")
+        f.write("\n")
+        f.write("![dynamic_forecast][dynamic_forecast]\n")
+        f.write("\n")
+        f.write("[stats]: stats.png\n")
+        f.write("[static_forecast]: static_forecast.png\n")
+        f.write("[dynamic_forecast]: dynamic_forecast.png\n")
 
     plt.rc('lines', linewidth=3, markersize=8)
     plt.rc('font', size=12)
 
     with plt.xkcd():
         fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(nrows=2, ncols=3, figsize=(15, 15))
-
-        fig.suptitle(f'{str(dates[-1])[:10]} REPORT', fontsize=24, fontweight='bold')
 
         ax1.plot(dates, infected, 'o-', label='total infected')
         ax1.plot(dates, recovered, 'o-', label='total recovered')
@@ -151,11 +160,10 @@ if __name__ == '__main__':
         ax6.plot(dates, tested, 'o-', label='total tested')
         ax6.legend(loc='upper left')
 
-        plt.show()
+        plt.savefig('report/stats.png')
 
     with plt.xkcd():
         fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15))
-        fig.suptitle(f'{str(dates[-1])[:10]} STATIC FORECAST', fontsize=24, fontweight='bold')
 
         fig.autofmt_xdate()
 
@@ -180,11 +188,10 @@ if __name__ == '__main__':
                       f'pessimistic)')
         ax3.legend(loc='upper left')
 
-        plt.show()
+        plt.savefig('report/static_forecast.png')
 
     with plt.xkcd():
         fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15))
-        fig.suptitle(f'{str(dates[-1])[:10]} DYNAMIC FORECAST', fontsize=24, fontweight='bold')
 
         fig.autofmt_xdate()
 
@@ -206,4 +213,4 @@ if __name__ == '__main__':
                       f'super optimistic)')
         ax3.legend(loc='upper left')
 
-        plt.show()
+        plt.savefig('report/dynamic_forecast.png')
