@@ -73,7 +73,7 @@ if __name__ == '__main__':
         dates_dyn_forecast.append(dates_dyn_forecast[-1] + timedelta(days=1))
 
     with open(pathlib.Path() / 'report' / 'report.md', 'w') as f:
-        f.write("<div align='center'>\n")
+        f.write("<div align='center'>\n\n")
         f.write(f"# {str(dates[-1])[:10]} Report\n")
         f.write("CoVid-19 Italy Monitoring\n")
         f.write("</div>\n")
