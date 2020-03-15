@@ -39,7 +39,7 @@ if __name__ == '__main__':
     growth_rate = (infected[1:] - infected[:-1]) / infected[:-1]
     avg_growth_rate = moving_average(growth_rate, 5)
 
-    # forecast
+    # static forecast
     infected_forecast = infected_list.copy()
     infected_forecast_optimistic = infected_list.copy()
     infected_forecast_pessimistic = infected_list.copy()
@@ -53,6 +53,23 @@ if __name__ == '__main__':
             infected_forecast_pessimistic[-1] * (1 + growth_rate[-1] + 0.05))
 
         dates_forecast.append(dates_forecast[-1] + timedelta(days=1))
+
+    # dynamic forecast
+    infected_dyn_forecast = infected_list.copy()
+    infected_dyn_forecast_optimistic = infected_list.copy()
+    infected_dyn_forecast_super_optimistic = infected_list.copy()
+    dates_dyn_forecast = dates.copy()
+
+    for i in range(10):
+        infected_dyn_forecast.append(
+            infected_dyn_forecast[-1] * (1 + growth_rate[-1] - growth_rate[-1] / 30 * i))
+        infected_dyn_forecast_optimistic.append(
+            infected_dyn_forecast_optimistic[-1] * (1 + growth_rate[-1] - growth_rate[-1] / 20 * i))
+        infected_dyn_forecast_super_optimistic.append(
+            infected_dyn_forecast_super_optimistic[-1] * (
+                    1 + growth_rate[-1] - growth_rate[-1] / 10 * i))
+
+        dates_dyn_forecast.append(dates_dyn_forecast[-1] + timedelta(days=1))
 
     print("-" * 50)
     print(f"{str(dates[-1])[:10]} Report")
@@ -70,20 +87,35 @@ if __name__ == '__main__':
     print(f"Number of new infected is {new_infected}")
     print(f"Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is {avg_growth_rate[-1]:.2f})")
     print("-" * 50)
-    print(f"Forecast with the current growth rate ({growth_rate[-1]:.2f})")
+    print(f"Static forecast with the current growth rate ({growth_rate[-1]:.2f})")
     print(f"--- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 3))}")
     print(f"--- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 5))}")
     print(f"--- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 10))}")
     print("-" * 50)
-    print(f"Optimistic forecast (growth rate = {growth_rate[-1] - 0.05:.2f})")
+    print(f"Static forecast (growth rate = {growth_rate[-1] - 0.05:.2f})")
     print(f"--- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 3))}")
     print(f"--- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 5))}")
     print(f"--- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 10))}")
     print("-" * 50)
-    print(f"Pessimistic forecast (growth rate = {growth_rate[-1] + 0.05:.2f})")
+    print(f"Static forecast (growth rate = {growth_rate[-1] + 0.05:.2f})")
     print(f"--- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 3))}")
     print(f"--- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 5))}")
     print(f"--- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 10))}")
+    print("-" * 50)
+    print(f"Dynamic forecast with a decreasing growth rate")
+    print(f"--- after 3 days: {int(infected_dyn_forecast[-8])}")
+    print(f"--- after 5 days: {int(infected_dyn_forecast[-6])}")
+    print(f"--- after 10 days: {int(infected_dyn_forecast[-1])}")
+    print("-" * 50)
+    print(f"Dynamic forecast with a fast decreasing growth rate")
+    print(f"--- after 3 days: {int(infected_dyn_forecast_optimistic[-8])}")
+    print(f"--- after 5 days: {int(infected_dyn_forecast_optimistic[-6])}")
+    print(f"--- after 10 days: {int(infected_dyn_forecast_optimistic[-1])}")
+    print("-" * 50)
+    print(f"Dynamic forecast with a super fast decreasing growth rate")
+    print(f"--- after 3 days: {int(infected_dyn_forecast_super_optimistic[-8])}")
+    print(f"--- after 5 days: {int(infected_dyn_forecast_super_optimistic[-6])}")
+    print(f"--- after 10 days: {int(infected_dyn_forecast_super_optimistic[-1])}")
 
     plt.rc('lines', linewidth=3, markersize=8)
     plt.rc('font', size=12)
@@ -123,7 +155,7 @@ if __name__ == '__main__':
 
     with plt.xkcd():
         fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15))
-        fig.suptitle(f'{str(dates[-1])[:10]} FORECAST', fontsize=24, fontweight='bold')
+        fig.suptitle(f'{str(dates[-1])[:10]} STATIC FORECAST', fontsize=24, fontweight='bold')
 
         fig.autofmt_xdate()
 
@@ -146,6 +178,32 @@ if __name__ == '__main__':
         ax3.set_title(f'infected in the next 10 days\nw/ growth rate'
                       f' {growth_rate[-1] + 0.05:.2f}\n('
                       f'pessimistic)')
+        ax3.legend(loc='upper left')
+
+        plt.show()
+
+    with plt.xkcd():
+        fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=(15, 15))
+        fig.suptitle(f'{str(dates[-1])[:10]} DYNAMIC FORECAST', fontsize=24, fontweight='bold')
+
+        fig.autofmt_xdate()
+
+        ax1.plot(dates_dyn_forecast, infected_dyn_forecast, '*-', label='forecast')
+        ax1.plot(dates, infected, 'o-', label='actual')
+
+        ax1.set_title(f'infected in the next 10 days\nw/ a decreasing growth rate')
+        ax1.legend(loc='upper left')
+
+        ax2.plot(dates_dyn_forecast, infected_dyn_forecast_optimistic, '*-', label='forecast')
+        ax2.plot(dates, infected, 'o-', label='actual')
+        ax2.set_title(f'infected in the next 10 days\nw/ a fast decreasing growth rate\n('
+                      f'optimistic)')
+        ax2.legend(loc='upper left')
+
+        ax3.plot(dates_dyn_forecast, infected_dyn_forecast_super_optimistic, '*-', label='forecast')
+        ax3.plot(dates, infected, 'o-', label='actual')
+        ax3.set_title(f'infected in the next 10 days\nw/ a super fast decreasing growth rate\n('
+                      f'super optimistic)')
         ax3.legend(loc='upper left')
 
         plt.show()

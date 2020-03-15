@@ -32,25 +32,43 @@ Current number of infected individuals is 17750
 Number of new infected is 3497
 Growth rate is 0.20 (5 days smoothing is 0.18)
 --------------------------------------------------
-Forecast with the current growth rate (0.20)
+Static forecast with the current growth rate (0.20)
 --- after 3 days: 36378
 --- after 5 days: 52212
 --- after 10 days: 128851
 --------------------------------------------------
-Optimistic forecast (growth rate = 0.15)
+Static forecast (growth rate = 0.15)
 --- after 3 days: 32011
 --- after 5 days: 42188
 --- after 10 days: 84128
 --------------------------------------------------
-Pessimistic forecast (growth rate = 0.25)
+Static forecast (growth rate = 0.25)
 --- after 3 days: 41126
 --- after 5 days: 64055
 --- after 10 days: 193938
+--------------------------------------------------
+Dynamic forecast with a decreasing growth rate
+--- after 3 days: 35779
+--- after 5 days: 49390
+--- after 10 days: 100111
+--------------------------------------------------
+Dynamic forecast with a fast decreasing growth rate
+--- after 3 days: 35481
+--- after 5 days: 48020
+--- after 10 days: 87937
+--------------------------------------------------
+Dynamic forecast with a super fast decreasing growth rate
+--- after 3 days: 34594
+--- after 5 days: 44069
+--- after 10 days: 58707
+
 ```
 
 and the following images:
-![stats][example]
-![forecast][forecast]
+![stats][stats]
+![static_forecast][static_forecast]
+![dynamic_forecast][dynamic_forecast]
 
-[example]: example.png
-[forecast]: forecast.png
+[stats]: stats.png
+[static_forecast]: static_forecast.png
+[dynamic_forecast]: dynamic_forecast.png
