@@ -93,15 +93,15 @@ if __name__ == '__main__':
         f.write(f"##### Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is"
                 f" {avg_growth_rate[-1]:.2f})\n")
         f.write("![stats][stats]\n")
-        f.write(f"##### Static forecast with the current growth rate ({growth_rate[-1]:.2f})\n")
-        f.write(f"- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 3))}\n")
-        f.write(f"- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 5))}\n")
-        f.write(f"- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 10))}\n")
         f.write(f"##### Static forecast (growth rate = {growth_rate[-1] - 0.05:.2f})\n")
         f.write(f"- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 3))}\n")
         f.write(f"- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 5))}\n")
         f.write(
             f"- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 10))}\n")
+        f.write(f"##### Static forecast with the current growth rate ({growth_rate[-1]:.2f})\n")
+        f.write(f"- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 3))}\n")
+        f.write(f"- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 5))}\n")
+        f.write(f"- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 10))}\n")
         f.write(f"##### Static forecast (growth rate = {growth_rate[-1] + 0.05:.2f})\n")
         f.write(f"- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 3))}\n")
         f.write(f"- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 5))}\n")
@@ -167,25 +167,25 @@ if __name__ == '__main__':
 
         fig.autofmt_xdate()
 
-        ax1.plot(dates_forecast, infected_forecast, '*-', label='forecast')
+        ax1.plot(dates_forecast, infected_forecast_optimistic, '*-', label='forecast')
         ax1.plot(dates, infected, 'o-', label='actual')
-
-        ax1.set_title(f'infected in the next 10 days\nw/ the current growth rate'
-                      f' {growth_rate[-1]:.2f}')
-        ax1.legend(loc='upper left')
-
-        ax2.plot(dates_forecast, infected_forecast_optimistic, '*-', label='forecast')
-        ax2.plot(dates, infected, 'o-', label='actual')
-        ax2.set_title(f'infected in the next 10 days\nw/ growth rate'
+        ax1.set_title(f'infected in the next 10 days\nw/ growth rate'
                       f' {growth_rate[-1] - 0.05:.2f}\n('
                       f'optimistic)')
+        ax1.legend(loc='upper left')
+
+        ax2.plot(dates_forecast, infected_forecast, '*-', label='forecast')
+        ax2.plot(dates, infected, 'o-', label='actual')
+
+        ax2.set_title(f'infected in the next 10 days\nw/ the current growth rate\n(pessimistic)'
+                      f' {growth_rate[-1]:.2f}')
         ax2.legend(loc='upper left')
 
         ax3.plot(dates_forecast, infected_forecast_pessimistic, '*-', label='forecast')
         ax3.plot(dates, infected, 'o-', label='actual')
         ax3.set_title(f'infected in the next 10 days\nw/ growth rate'
                       f' {growth_rate[-1] + 0.05:.2f}\n('
-                      f'pessimistic)')
+                      f'super pessimistic)')
         ax3.legend(loc='upper left')
 
         plt.savefig('report/static_forecast.png')
