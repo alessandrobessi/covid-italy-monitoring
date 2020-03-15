@@ -193,7 +193,7 @@ if __name__ == '__main__':
         ax.plot(dates_dyn_forecast, infected_dyn_forecast_optimistic, 's-',
                 label='dynamic forecast w/ a fast decreasing growth rate (optimistic)')
         ax.plot(dates_dyn_forecast, infected_dyn_forecast_super_optimistic, 'v-',
-                label='dyamic forecast w/ a super fast decreasing growth rate (super optimistic)')
+                label='dynamic forecast w/ a super fast decreasing growth rate (super optimistic)')
         ax.plot(dates, infected, 'o-', label='actual')
 
         ax.set_title(f'infected in the next 10 days')
