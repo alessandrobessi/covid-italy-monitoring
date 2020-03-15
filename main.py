@@ -85,8 +85,9 @@ if __name__ == '__main__':
         f.write("</div>\n")
         f.write("\n")
         f.write(f"##### Total number of infected individuals is {infected[-1]}\n")
-        f.write(f"##### Total number of recovered individuals is {recovered[-1]}\n")
-        f.write(f"##### Total number of dead individuals is {dead[-1]}\n")
+        f.write("Infected | Recovered | Dead\n")
+        f.write(":---: | :---: | :---:\n")
+        f.write(f"*{currently_infected[-1]}* | *{recovered[-1]}* | *{dead[-1]}*\n")
         f.write(f"##### Total number of tested individuals is {tested[-1]}\n")
         f.write("\n")
         f.write(f"##### Current number of infected individuals is {currently_infected[-1]}\n")
@@ -141,19 +142,18 @@ if __name__ == '__main__':
 
     with plt.xkcd():
         fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(nrows=2, ncols=3, figsize=(15, 15))
-
-        ax1.plot(dates, infected, 'o-', label='total infected')
-        ax1.plot(dates, recovered, 'o-', label='total recovered')
-        ax1.plot(dates, dead, 'o-', label='total dead')
-        ax1.legend(loc='upper left')
-
         fig.autofmt_xdate()
 
-        ax2.plot(dates, infected, 'o-', label='total infected\nin log scale')
-        ax2.set_yscale('log')
+        ax1.plot(dates, currently_infected, 'o-', label='infected')
+        ax1.plot(dates, recovered, 'o-', label='recovered')
+        ax1.plot(dates, dead, 'o-', label='dead')
+        ax1.legend(loc='upper left')
+
+        ax2.plot(dates, infected, 'o-', label='total infected')
         ax2.legend(loc='upper left')
 
-        ax3.plot(dates, currently_infected, 'o-', label='currently infected')
+        ax3.plot(dates, infected, 'o-', label='total infected\nin log scale')
+        ax3.set_yscale('log')
         ax3.legend(loc='upper left')
 
         ax4.plot(dates[1:], growth_rate, 'o-', label='growth rate')
