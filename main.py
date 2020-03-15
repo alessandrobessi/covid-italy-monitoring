@@ -168,13 +168,13 @@ if __name__ == '__main__':
         fig.autofmt_xdate()
 
         ax.plot(dates_forecast, infected_forecast_optimistic, '*-',
-                label='forecast w/ growth rate '
+                label='static forecast w/ growth rate '
                       f'{growth_rate[-1] - 0.05:.2f}\n(optimistic)')
         ax.plot(dates_forecast, infected_forecast, 's-',
-                label='forecast w/ the current growth rate'
+                label='static forecast w/ the current growth rate'
                       f'\n(pessimistic)')
         ax.plot(dates_forecast, infected_forecast_pessimistic, 'v-',
-                label='forecast w/ growth rate '
+                label='static forecast w/ growth rate '
                       f'{growth_rate[-1] + 0.05:.2f}\n(super pessimistic)')
 
         ax.plot(dates, infected, 'o-', label='actual')
@@ -189,11 +189,11 @@ if __name__ == '__main__':
         fig.autofmt_xdate()
 
         ax.plot(dates_dyn_forecast, infected_dyn_forecast, '*-',
-                label='forecast w/ a slow decreasing growth rate (expected)')
+                label='dynamic forecast w/ a slow decreasing growth rate (expected)')
         ax.plot(dates_dyn_forecast, infected_dyn_forecast_optimistic, 's-',
-                label='forecast w/ a fast decreasing growth rate (optimistic)')
+                label='dynamic forecast w/ a fast decreasing growth rate (optimistic)')
         ax.plot(dates_dyn_forecast, infected_dyn_forecast_super_optimistic, 'v-',
-                label='forecast w/ a super fast decreasing growth rate (super optimistic)')
+                label='dyamic forecast w/ a super fast decreasing growth rate (super optimistic)')
         ax.plot(dates, infected, 'o-', label='actual')
 
         ax.set_title(f'infected in the next 10 days')
