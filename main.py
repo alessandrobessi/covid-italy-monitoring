@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
     with open(pathlib.Path() / 'report' / 'report.md', 'w') as f:
         f.write("<div align='center'>\n\n")
-        f.write(f"# {str(dates[-1])[:10]} Report\n")
+        f.write(f"# {str(dates[-1])[:10]}\n")
         f.write("CoVid-19 Italy Monitoring\n")
         f.write("</div>\n")
         f.write("\n")

@@ -1,7 +1,6 @@
 <div align='center'>
 
-# 2020-03-14 Report
-
+# 2020-03-14
 CoVid-19 Italy Monitoring
 </div>
 
