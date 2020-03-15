@@ -86,7 +86,7 @@ if __name__ == '__main__':
         f.write(f"##### Current number of infected individuals is {currently_infected[-1]}\n")
         f.write(f"- *hospitalized individuals* are {hospitalized[-1]}\n")
         f.write(f"- *hospitalized individuals in ICU* are {icus[-1]}\n")
-        f.write(f"- home isolated individuals are {isolated[-1]}\n")
+        f.write(f"- *home isolated individuals* are {isolated[-1]}\n")
         f.write("\n")
         f.write(f"##### New infected individuals are {new_infected}\n")
         f.write("\n")
