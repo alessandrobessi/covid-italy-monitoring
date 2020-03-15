@@ -36,6 +36,16 @@ Forecast with the current growth rate (0.20)
 --- after 3 days: 36378
 --- after 5 days: 52212
 --- after 10 days: 128851
+--------------------------------------------------
+Optimistic forecast (growth rate = 0.15)
+--- after 3 days: 32011
+--- after 5 days: 42188
+--- after 10 days: 84128
+--------------------------------------------------
+Pessimistic forecast (growth rate = 0.25)
+--- after 3 days: 41126
+--- after 5 days: 64055
+--- after 10 days: 193938
 ```
 
 and the following images:

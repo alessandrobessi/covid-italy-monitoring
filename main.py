@@ -1,4 +1,5 @@
 import json
+import math
 from datetime import datetime, timedelta
 
 import matplotlib.pyplot as plt
@@ -70,9 +71,19 @@ if __name__ == '__main__':
     print(f"Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is {avg_growth_rate[-1]:.2f})")
     print("-" * 50)
     print(f"Forecast with the current growth rate ({growth_rate[-1]:.2f})")
-    print(f"--- after 3 days: {int(infected_forecast[-8])}")
-    print(f"--- after 5 days: {int(infected_forecast[-6])}")
-    print(f"--- after 10 days: {int(infected_forecast[-1])}")
+    print(f"--- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 3))}")
+    print(f"--- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 5))}")
+    print(f"--- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1], 10))}")
+    print("-" * 50)
+    print(f"Optimistic forecast (growth rate = {growth_rate[-1] - 0.05:.2f})")
+    print(f"--- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 3))}")
+    print(f"--- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 5))}")
+    print(f"--- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] - 0.05, 10))}")
+    print("-" * 50)
+    print(f"Pessimistic forecast (growth rate = {growth_rate[-1] + 0.05:.2f})")
+    print(f"--- after 3 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 3))}")
+    print(f"--- after 5 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 5))}")
+    print(f"--- after 10 days: {int(infected[-1] * math.pow(1 + growth_rate[-1] + 0.05, 10))}")
 
     plt.rc('lines', linewidth=3, markersize=8)
     plt.rc('font', size=12)
