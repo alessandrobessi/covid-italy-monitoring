@@ -198,7 +198,7 @@ if __name__ == '__main__':
         ax1.plot(dates_dyn_forecast, infected_dyn_forecast, '*-', label='forecast')
         ax1.plot(dates, infected, 'o-', label='actual')
 
-        ax1.set_title(f'infected in the next 10 days\nw/ a decreasing\ngrowth rate')
+        ax1.set_title(f'infected in the next 10 days\nw/ a decreasing\ngrowth rate\n(expected)')
         ax1.legend(loc='upper left')
 
         ax2.plot(dates_dyn_forecast, infected_dyn_forecast_optimistic, '*-', label='forecast')
