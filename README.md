@@ -21,9 +21,9 @@ Total number of dead individuals is 1441
 Total number of tested individuals is 109170
 --------------------------------------------------
 Current number of infected individuals is 17750
---- hospitalized individuals is 8372
---- hospitalized individuals in ICU is 1518
---- home isolated individuals is 7860
+--- hospitalized individuals are 8372
+--- hospitalized individuals are ICU is 1518
+--- home isolated individuals are 7860
 --------------------------------------------------
 Number of new infected is 3497
 Growth rate is 0.20 (5 days smoothing is 0.18)
