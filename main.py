@@ -157,8 +157,8 @@ if __name__ == '__main__':
         ax4.plot(dates[5:], avg_growth_rate, label='5 days smoothing')
         ax4.legend(loc='upper right')
 
-        ax5.stackplot(dates, isolated, hospitalized, icus,
-                      labels=['home isolation', 'hospitalized', 'hospitalized (in ICU)'])
+        ax5.stackplot(dates, icus, hospitalized, isolated,
+                      labels=['hospitalized (in ICU)', 'hospitalized', 'home isolation'])
         ax5.legend(loc='upper left')
 
         ax6.plot(dates, tested, 'o-', label='total tested')
