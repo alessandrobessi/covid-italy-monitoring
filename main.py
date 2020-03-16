@@ -142,9 +142,8 @@ if __name__ == '__main__':
         fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(nrows=2, ncols=3, figsize=(15, 15))
         fig.autofmt_xdate()
 
-        ax1.plot(dates, currently_infected, 'o-', label='infected')
-        ax1.plot(dates, recovered, 's-', label='recovered')
-        ax1.plot(dates, dead, 'v-', label='dead')
+        ax1.stackplot(dates, dead, recovered, currently_infected,
+                      labels=['dead', 'recovered', 'infected'])
         ax1.legend(loc='upper left')
 
         ax2.plot(dates, infected, 'o-', label='total infected')
