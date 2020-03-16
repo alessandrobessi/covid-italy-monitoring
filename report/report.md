@@ -1,40 +1,40 @@
 <div align='center'>
 
-# 2020-03-15
+# 2020-03-16
 CoVid-19 Italy Monitoring
 </div>
 
-##### Total number of infected individuals is 24747 (+3590)
+##### Total number of infected individuals is 27980 (+3233)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*20603* | *2335* | *1809*
-*(+2853*) | *(+369*) | (*+368*)
+*23073* | *2749* | *2158*
+*(+2470*) | *(+414*) | (*+349*)
 
-*Total number of tested individuals is 124899 (+15729)*
+*Total number of tested individuals is 137962 (+13063)*
 ***
-##### Current number of infected individuals is 20603 (+2853)
+##### Current number of infected individuals is 23073 (+2470)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*9663* |*1672* |*9268*
-*(+1291*) |*(+154*) |*(+1408*)
+*11025* |*1851* |*10197*
+*(+1362*) |*(+179*) |*(+929*)
 ***
-##### Growth rate is 0.17 (5 days smoothing is 0.20)
-- *time to 2x* is 4.42 days
-- *time to 10x* is 14.69 days
+##### Growth rate is 0.13 (5 days smoothing is 0.18)
+- *time to 2x* is 5.65 days
+- *time to 10x* is 18.75 days
 ![stats][stats]
 
 ##### Dynamic forecast with a slow decreasing growth rate
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*39223* |*51703* |*84760* |*110450* |*111379*
+*40132* |*49807* |*73194* |*89825* |*90406*
 ##### Dynamic forecast with a fast decreasing growth rate
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*39099* |*50935* |*77660* |*90323* |*90439*
+*40031* |*49220* |*68327* |*76783* |*76858*
 ##### Dynamic forecast with a super fast decreasing growth rate
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*38852* |*49484* |*67154* |*70649* |*70650*
+*39830* |*48105* |*60967* |*63400* |*63401*
 
 
 ![dynamic_forecast][dynamic_forecast]
