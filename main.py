@@ -164,8 +164,8 @@ if __name__ == '__main__':
         fig.autofmt_xdate()
 
         ax1.plot(dates, currently_infected, 'o-', label='infected')
-        ax1.plot(dates, recovered, 'o-', label='recovered')
-        ax1.plot(dates, dead, 'o-', label='dead')
+        ax1.plot(dates, recovered, 's-', label='recovered')
+        ax1.plot(dates, dead, 'v-', label='dead')
         ax1.legend(loc='upper left')
 
         ax2.plot(dates, infected, 'o-', label='total infected')
@@ -180,8 +180,8 @@ if __name__ == '__main__':
         ax4.legend(loc='upper right')
 
         ax5.plot(dates, hospitalized, 'o-', label='hospitalized')
-        ax5.plot(dates, icus, 'o-', label='hospitalized (in ICU)')
-        ax5.plot(dates, isolated, 'o-', label='home isolation')
+        ax5.plot(dates, icus, 's-', label='hospitalized (in ICU)')
+        ax5.plot(dates, isolated, 'v-', label='home isolation')
         ax5.legend(loc='upper left')
 
         ax6.plot(dates, tested, 'o-', label='total tested')
