@@ -67,14 +67,17 @@ if __name__ == '__main__':
     infected_dyn_forecast_super_optimistic = infected_list.copy()
     dates_dyn_forecast = dates.copy()
 
-    for i in range(10):
+    N = 20
+    for i in range(N):
         infected_dyn_forecast.append(
-            infected_dyn_forecast[-1] * (1 + growth_rate[-1] - growth_rate[-1] / 30 * i))
+            infected_dyn_forecast[-1] * (1 + growth_rate[-1] - growth_rate[-1] / (N * 2) * i))
         infected_dyn_forecast_optimistic.append(
-            infected_dyn_forecast_optimistic[-1] * (1 + growth_rate[-1] - growth_rate[-1] / 20 * i))
+            infected_dyn_forecast_optimistic[-1] * (1 + growth_rate[-1] - growth_rate[-1] / (N *
+                                                                                             1.5) *
+                                                    i))
         infected_dyn_forecast_super_optimistic.append(
             infected_dyn_forecast_super_optimistic[-1] * (
-                    1 + growth_rate[-1] - growth_rate[-1] / 10 * i))
+                    1 + growth_rate[-1] - growth_rate[-1] / N * i))
 
         dates_dyn_forecast.append(dates_dyn_forecast[-1] + timedelta(days=1))
 
@@ -223,7 +226,7 @@ if __name__ == '__main__':
                 label='dynamic forecast w/ a super fast decreasing growth rate (super optimistic)')
         ax.plot(dates, infected, 'o-', label='actual')
 
-        ax.set_title(f'infected in the next 10 days')
+        ax.set_title(f'infected in the next {N} days')
         ax.legend(loc='upper left')
 
         plt.savefig('report/dynamic_forecast.png')

@@ -41,15 +41,15 @@ after 3 days | after 5 days | after 10 days
 ##### Dynamic forecast with a slow decreasing growth rate
 after 3 days | after 5 days | after 10 days
 :---: | :---: | :---:
-*39030* |*51607* |*95109*
+*142448* |*176275* |*280747*
 ##### Dynamic forecast with a fast decreasing growth rate
 after 3 days | after 5 days | after 10 days
 :---: | :---: | :---:
-*38745* |*50351* |*84933*
+*129182* |*154418* |*220145*
 ##### Dynamic forecast with a super fast decreasing growth rate
 after 3 days | after 5 days | after 10 days
 :---: | :---: | :---:
-*37896* |*46713* |*59799*
+*105906* |*117907* |*133650*
 
 
 ![dynamic_forecast][dynamic_forecast]
