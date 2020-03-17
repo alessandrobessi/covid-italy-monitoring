@@ -1,6 +1,6 @@
 <div align='center'>
 
-# 2020-03-23
+# 2020-03-17
 CoVid-19 Friuli Venezia Giulia Monitoring
 </div>
 
