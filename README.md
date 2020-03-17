@@ -16,7 +16,7 @@ Then run
 python3 main.py
 ```
 You find reports with statistics, predictions, and images for:
- - **[Italy](report/report.md)**
+ - :it: **[Italy](report/report.md)** :it:
  - [Abruzzo](report/regions/report_Abruzzo.md)
  - [Basilicata](report/regions/report_Basilicata.md)
  - [Calabria](report/regions/report_Calabria.md)
