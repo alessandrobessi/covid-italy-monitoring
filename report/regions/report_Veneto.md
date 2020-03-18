@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-03-17
+# 2020-03-18
 CoVid-19 Veneto Monitoring
 </div>
 
-##### Total number of infected individuals is 2704.0 (+231.0)
+##### Total number of infected individuals is 3214.0 (+510.0)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*2488* | *136* | *80*
-*(+214*) | *(+6*) | (*+11*)
+*2953* | *167* | *94*
+*(+465*) | *(+31*) | (*+14*)
 
-*Total number of tested individuals is 35478 (+426)*
+*Total number of tested individuals is 40841 (+5363)*
 ***
-##### Current number of infected individuals is 2488 (+214)
+##### Current number of infected individuals is 2953 (+465)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*548* |*171* |*1769*
-*(+50*) |*(+15*) |*(+149*)
+*646* |*195* |*2112*
+*(+98*) |*(+24*) |*(+343*)
 ***
-##### Growth rate is 0.09 (5 days smoothing is 0.14)
-- *time to 2x* is 7.76 days
-- *time to 10x* is 25.78 days
+##### Growth rate is 0.19 (5 days smoothing is 0.15)
+- *time to 2x* is 4.01 days
+- *time to 10x* is 13.33 days
 ![stats][stats]
 
 [stats]: stats_Veneto.png
