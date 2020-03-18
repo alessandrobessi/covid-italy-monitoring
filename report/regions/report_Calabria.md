@@ -4,7 +4,7 @@
 CoVid-19 Calabria Monitoring
 </div>
 
-##### Total number of infected individuals is 129.0 (+15.0)
+##### Total number of infected individuals is 129 (+15)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *126* | *2* | *1*

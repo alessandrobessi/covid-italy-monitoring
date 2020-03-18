@@ -4,7 +4,7 @@
 CoVid-19 Toscana Monitoring
 </div>
 
-##### Total number of infected individuals is 1330.0 (+277.0)
+##### Total number of infected individuals is 1330 (+277)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *1291* | *17* | *22*

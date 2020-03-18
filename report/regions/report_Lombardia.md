@@ -4,7 +4,7 @@
 CoVid-19 Lombardia Monitoring
 </div>
 
-##### Total number of infected individuals is 17713.0 (+1493.0)
+##### Total number of infected individuals is 17713 (+1493)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *12266* | *3488* | *1959*

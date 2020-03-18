@@ -4,7 +4,7 @@
 CoVid-19 Molise Monitoring
 </div>
 
-##### Total number of infected individuals is 28.0 (+3.0)
+##### Total number of infected individuals is 28 (+3)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *21* | *6* | *1*

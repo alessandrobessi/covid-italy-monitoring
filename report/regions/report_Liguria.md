@@ -4,7 +4,7 @@
 CoVid-19 Liguria Monitoring
 </div>
 
-##### Total number of infected individuals is 887.0 (+109.0)
+##### Total number of infected individuals is 887 (+109)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *744* | *70* | *73*

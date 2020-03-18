@@ -4,7 +4,7 @@
 CoVid-19 Abruzzo Monitoring
 </div>
 
-##### Total number of infected individuals is 263.0 (+34.0)
+##### Total number of infected individuals is 263 (+34)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *249* | *7* | *7*

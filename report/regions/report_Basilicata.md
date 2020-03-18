@@ -4,7 +4,7 @@
 CoVid-19 Basilicata Monitoring
 </div>
 
-##### Total number of infected individuals is 27.0 (+7.0)
+##### Total number of infected individuals is 27 (+7)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *27* | *0* | *0*

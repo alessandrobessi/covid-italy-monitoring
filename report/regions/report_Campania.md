@@ -4,7 +4,7 @@
 CoVid-19 Campania Monitoring
 </div>
 
-##### Total number of infected individuals is 460.0 (+0.0)
+##### Total number of infected individuals is 460 (+0)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *423* | *28* | *9*

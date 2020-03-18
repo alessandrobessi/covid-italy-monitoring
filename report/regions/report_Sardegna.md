@@ -4,7 +4,7 @@
 CoVid-19 Sardegna Monitoring
 </div>
 
-##### Total number of infected individuals is 134.0 (+17.0)
+##### Total number of infected individuals is 134 (+17)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *132* | *0* | *2*

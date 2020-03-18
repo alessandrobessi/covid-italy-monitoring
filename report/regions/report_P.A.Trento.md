@@ -4,7 +4,7 @@
 CoVid-19 P.A. Trento Monitoring
 </div>
 
-##### Total number of infected individuals is 455.0 (+70.0)
+##### Total number of infected individuals is 455 (+70)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *436* | *12* | *7*

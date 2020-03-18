@@ -4,7 +4,7 @@
 CoVid-19 Puglia Monitoring
 </div>
 
-##### Total number of infected individuals is 383.0 (+43.0)
+##### Total number of infected individuals is 383 (+43)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *362* | *2* | *19*

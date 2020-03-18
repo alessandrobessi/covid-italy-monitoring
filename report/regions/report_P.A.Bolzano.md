@@ -4,7 +4,7 @@
 CoVid-19 P.A. Bolzano Monitoring
 </div>
 
-##### Total number of infected individuals is 376.0 (+85.0)
+##### Total number of infected individuals is 376 (+85)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *366* | *1* | *9*

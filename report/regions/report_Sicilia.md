@@ -4,7 +4,7 @@
 CoVid-19 Sicilia Monitoring
 </div>
 
-##### Total number of infected individuals is 282.0 (+45.0)
+##### Total number of infected individuals is 282 (+45)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *267* | *12* | *3*

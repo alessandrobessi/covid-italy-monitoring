@@ -4,7 +4,7 @@
 CoVid-19 Lazio Monitoring
 </div>
 
-##### Total number of infected individuals is 724.0 (+117.0)
+##### Total number of infected individuals is 724 (+117)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *650* | *42* | *32*

@@ -4,7 +4,7 @@
 CoVid-19 Veneto Monitoring
 </div>
 
-##### Total number of infected individuals is 3214.0 (+510.0)
+##### Total number of infected individuals is 3214 (+510)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *2953* | *167* | *94*

@@ -4,7 +4,7 @@
 CoVid-19 Emilia Romagna Monitoring
 </div>
 
-##### Total number of infected individuals is 4525.0 (+594.0)
+##### Total number of infected individuals is 4525 (+594)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *3915* | *152* | *458*

@@ -4,7 +4,7 @@
 CoVid-19 Valle d'Aosta Monitoring
 </div>
 
-##### Total number of infected individuals is 165.0 (+29.0)
+##### Total number of infected individuals is 165 (+29)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *162* | *0* | *3*

@@ -229,7 +229,8 @@ if __name__ == '__main__':
             f.write("</div>\n")
             f.write("\n")
             f.write(
-                f"##### Total number of infected individuals is {infected[-1]} (+{new_infected})\n")
+                f"##### Total number of infected individuals is {int(infected[-1])} ("
+                f"+{int(new_infected)})\n")
             f.write("Infected | Recovered | Dead\n")
             f.write(":---: | :---: | :---:\n")
             f.write(f"*{currently_infected[-1]}* | *{recovered[-1]}* | *{dead[-1]}*\n")

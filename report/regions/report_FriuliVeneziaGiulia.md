@@ -4,7 +4,7 @@
 CoVid-19 Friuli Venezia Giulia Monitoring
 </div>
 
-##### Total number of infected individuals is 462.0 (+68.0)
+##### Total number of infected individuals is 462 (+68)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *416* | *15* | *31*

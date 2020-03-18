@@ -4,7 +4,7 @@
 CoVid-19 Piemonte Monitoring
 </div>
 
-##### Total number of infected individuals is 2341.0 (+444.0)
+##### Total number of infected individuals is 2341 (+444)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *2187* | *0* | *154*

@@ -4,7 +4,7 @@
 CoVid-19 Marche Monitoring
 </div>
 
-##### Total number of infected individuals is 1568.0 (+197.0)
+##### Total number of infected individuals is 1568 (+197)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *1476* | *0* | *92*

@@ -4,7 +4,7 @@
 CoVid-19 Umbria Monitoring
 </div>
 
-##### Total number of infected individuals is 247.0 (+50.0)
+##### Total number of infected individuals is 247 (+50)
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *241* | *4* | *2*
