@@ -201,8 +201,8 @@ if __name__ == '__main__':
     with plt.xkcd():
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
         fig.autofmt_xdate()
-        ax.plot(dates_dyn_forecast, logistic_forecast, 's-', label='logistic forecast')
         ax.plot(dates, infected, 'o-', label='total infected')
+        ax.plot(dates_dyn_forecast, logistic_forecast, label='logistic forecast')
         ax.legend(loc='upper left')
         ax.fill_between(dates_dyn_forecast, fit_up_p, fit_dw_p, alpha=.25, color='gray')
         plt.savefig('report/logistic.png')
