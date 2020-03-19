@@ -23,6 +23,14 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 16.58 days
 ![stats][stats]
 
+##### Logistic fit forecast
+after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
+:---: | :---: | :---: | :---: | :---:
+*52446* |*59234* |*70374* |*76970* |*77813*
+
+
+![logistic][logistic]
+
 ##### Dynamic forecast with a slow decreasing growth rate
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
@@ -40,4 +48,5 @@ after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 ![dynamic_forecast][dynamic_forecast]
 
 [stats]: stats.png
+[logistic]: logistic.png
 [dynamic_forecast]: dynamic_forecast.png
