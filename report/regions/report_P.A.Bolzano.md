@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-03-19
+# 2020-03-20
 CoVid-19 P.A. Bolzano Monitoring
 </div>
 
-##### Total number of infected individuals is 436 (+60)
+##### Total number of infected individuals is 548 (+112)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*421* | *1* | *14*
-*(+55*) | *(+0*) | (*+5*)
+*530* | *1* | *17*
+*(+109*) | *(+0*) | (*+3*)
 
-*Total number of tested individuals is 3568 (+724)*
+*Total number of tested individuals is 4433 (+865)*
 ***
-##### Current number of infected individuals is 421 (+55)
+##### Current number of infected individuals is 530 (+109)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*87* |*18* |*316*
-*(+8*) |*(+0*) |*(+47*)
+*99* |*24* |*407*
+*(+12*) |*(+6*) |*(+91*)
 ***
-##### Growth rate is 0.16 (5 days smoothing is 0.20)
-- *time to 2x* is 4.68 days
-- *time to 10x* is 15.55 days
+##### Growth rate is 0.26 (5 days smoothing is 0.22)
+- *time to 2x* is 3.03 days
+- *time to 10x* is 10.07 days
 ![stats][stats]
 
 [stats]: stats_P.A.Bolzano.png

@@ -78,7 +78,6 @@ if __name__ == '__main__':
 
         dates_dyn_forecast.append(dates_dyn_forecast[-1] + timedelta(days=1))
 
-    # logistic fit
     x = np.array(np.linspace(1, len(infected), len(infected), dtype=np.float))
     xx = np.array(np.linspace(x[0], x[-1] + N, len(x) + N), dtype=np.float)
     popt, pcov = scipy.optimize.curve_fit(logistic, x, infected,

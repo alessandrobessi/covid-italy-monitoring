@@ -1,32 +1,32 @@
 <div align='center'>
 
-# 2020-03-19
+# 2020-03-20
 CoVid-19 Italy Monitoring
 </div>
 
-##### Total number of infected individuals is 41035 (+5322)
+##### Total number of infected individuals is 47021 (+5986)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*33190* | *4440* | *3405*
-*(+4480*) | *(+415*) | (*+427*)
+*37860* | *5129* | *4032*
+*(+4670*) | *(+689*) | (*+627*)
 
-*Total number of tested individuals is 182777 (+17236)*
+*Total number of tested individuals is 206886 (+24109)*
 ***
-##### Current number of infected individuals is 33190 (+4480)
+##### Current number of infected individuals is 37860 (+4670)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*15757* |*2498* |*14935*
-*(+1394*) |*(+241*) |*(+2845*)
+*16020* |*2655* |*19185*
+*(+263*) |*(+157*) |*(+4250*)
 ***
 ##### Growth rate is 0.15 (5 days smoothing is 0.14)
-- *time to 2x* is 4.99 days
-- *time to 10x* is 16.58 days
+- *time to 2x* is 5.09 days
+- *time to 10x* is 16.91 days
 ![stats][stats]
 
 ##### Logistic fit forecast
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*52446* |*59234* |*70374* |*76970* |*77813*
+*60267* |*68578* |*83080* |*92641* |*94036*
 
 
 ![logistic][logistic]
@@ -34,15 +34,15 @@ after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 ##### Dynamic forecast with a slow decreasing growth rate
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*61717* |*78817* |*121981* |*153996* |*155133*
+*70151* |*89154* |*136767* |*171829* |*173071*
 ##### Dynamic forecast with a fast decreasing growth rate
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*61541* |*77772* |*112863* |*128902* |*129048*
+*69956* |*87994* |*126734* |*144345* |*144504*
 ##### Dynamic forecast with a super fast decreasing growth rate
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*61194* |*75793* |*99215* |*103739* |*103741*
+*69569* |*85797* |*111692* |*116676* |*116678*
 
 
 ![dynamic_forecast][dynamic_forecast]
