@@ -2,7 +2,8 @@
 
 # CoVid-19 Italy Monitoring
 
-A script to visualize some statistics and predictions about the CoVid-19 epidemics in Italy.
+A script to visualize some statistics, predictions, and charts about the CoVid-19 epidemics in
+ Italy.
 </div>
 
 ### Usage
@@ -15,7 +16,7 @@ Then run
 ```shell script
 python3 main.py
 ```
-You find reports with statistics, predictions, and images for:
+You find reports with statistics, predictions, and charts for:
  - :it: **[Italy](report/report.md)** :it:
  - [Abruzzo](report/regions/report_Abruzzo.md)
  - [Basilicata](report/regions/report_Basilicata.md)
