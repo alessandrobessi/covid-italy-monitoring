@@ -18,7 +18,7 @@ hospitalized | in ICU | home isolation
 *191* |*31* |*329*
 *(+18*) |*(+0*) |*(+84*)
 ***
-##### Growth rate is 0.22 (5 days smoothing is 0.22)
+##### Growth rate is 0.22 (5 days smoothing is 0.23)
 - *time to 2x* is 3.55 days
 - *time to 10x* is 11.80 days
 ![stats][stats]

@@ -39,6 +39,21 @@ after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 
 ![logistic_dead][logistic_dead]
 
+
+##### Infected and dead in Italian regions
+
+
+![northern_regions][northern_regions]
+
+
+![center_regions][center_regions]
+
+
+![southern_regions][southern_regions]
+
 [stats]: stats.png
 [logistic_infected]: logistic_infected.png
 [logistic_dead]: logistic_dead.png
+[northern_regions]: northern_regions.png
+[center_regions]: center_regions.png
+[southern_regions]: southern_regions.png

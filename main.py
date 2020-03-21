@@ -138,9 +138,21 @@ if __name__ == '__main__':
         f.write("\n")
         f.write("\n![logistic_dead][logistic_dead]\n")
         f.write("\n")
+        f.write("\n")
+        f.write(f"##### Infected and dead in Italian regions\n")
+        f.write("\n")
+        f.write("\n![northern_regions][northern_regions]\n")
+        f.write("\n")
+        f.write("\n![center_regions][center_regions]\n")
+        f.write("\n")
+        f.write("\n![southern_regions][southern_regions]\n")
+        f.write("\n")
         f.write("[stats]: stats.png\n")
         f.write("[logistic_infected]: logistic_infected.png\n")
         f.write("[logistic_dead]: logistic_dead.png\n")
+        f.write("[northern_regions]: northern_regions.png\n")
+        f.write("[center_regions]: center_regions.png\n")
+        f.write("[southern_regions]: southern_regions.png\n")
 
     plt.rc('lines', linewidth=3, markersize=8)
     plt.rc('font', size=12)
@@ -205,6 +217,7 @@ if __name__ == '__main__':
         data = json.loads(decoded_data)
 
     regions = list(set([d['denominazione_regione'] for d in data]))
+    regions_dict = {}
     for region in regions:
         region_data = [d for d in data if d['denominazione_regione'] == region]
         dates = [datetime.strptime(d['data'][:10], '%Y-%m-%d') for d in region_data]
@@ -221,9 +234,14 @@ if __name__ == '__main__':
         infected = np.array(infected_list, dtype=np.float32)
         new_infected = infected[-1] - infected[-2]
 
-        infected[infected < 1e-3] = 1e-3
+        infected[infected < 1e-3] = 1e-1
         growth_rate = (infected[1:] - infected[:-1]) / infected[:-1]
-        growth_rate[growth_rate < 1e-3] = 1e-2
+        growth_rate[growth_rate < 1e-3] = 1e-1
+
+        regions_dict[region] = {
+            'infected': infected,
+            'dead': dead
+        }
 
         avg_growth_rate = moving_average(growth_rate, 5)
 
@@ -282,6 +300,7 @@ if __name__ == '__main__':
 
             ax3.plot(dates, infected, 'o-', label='total infected\nin log scale')
             ax3.set_yscale('log')
+            ax3.set_ylim(bottom=1)
             ax3.legend(loc='upper left')
 
             ax4.plot(dates[1:], growth_rate, 'o-', label='growth rate')
@@ -297,3 +316,29 @@ if __name__ == '__main__':
             ax6.legend(loc='upper left')
 
             plt.savefig(f'report/regions/stats_{region.replace(" ", "")}.png')
+
+    regions_classification = {
+        'northern': ['Emilia Romagna', 'Friuli Venezia Giulia', 'Liguria', 'Lombardia',
+                     'P.A. Bolzano', 'P.A. Trento', 'Piemonte', 'Valle d\'Aosta', 'Veneto'],
+        'center': ['Lazio', 'Marche', 'Toscana', 'Umbria'],
+        'southern': ['Abruzzo', 'Basilicata', 'Calabria', 'Campania', 'Molise', 'Puglia',
+                     'Sardegna', 'Sicilia']
+    }
+
+    for c, c_list in regions_classification.items():
+        with plt.xkcd():
+            fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(15, 15))
+            fig.autofmt_xdate()
+            for k, v in regions_dict.items():
+                if k in c_list:
+                    ax1.plot(dates, v['infected'], 'o-', label=k)
+                    ax2.plot(dates, v['dead'], 'o-', label=k)
+            ax1.legend(loc='upper left')
+            ax2.legend(loc='upper left')
+            ax1.set_yscale('log')
+            ax2.set_yscale('log')
+            ax1.set_ylim(bottom=1)
+            ax2.set_ylim(bottom=1)
+            ax1.set_title(f'Total infected in {c} regions')
+            ax2.set_title(f'Total dead in {c} regions')
+            plt.savefig(f'report/{c}_regions.png')
