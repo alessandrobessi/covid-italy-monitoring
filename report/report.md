@@ -23,30 +23,22 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 16.91 days
 ![stats][stats]
 
-##### Logistic fit forecast
+##### Logistic fit infected forecast
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
 *60267* |*68578* |*83080* |*92641* |*94036*
 
 
-![logistic][logistic]
+![logistic_infected][logistic_infected]
 
-##### Dynamic forecast with a slow decreasing growth rate
+##### Logistic fit dead forecast
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*70151* |*89154* |*136767* |*171829* |*173071*
-##### Dynamic forecast with a fast decreasing growth rate
-after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
-:---: | :---: | :---: | :---: | :---:
-*69956* |*87994* |*126734* |*144345* |*144504*
-##### Dynamic forecast with a super fast decreasing growth rate
-after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
-:---: | :---: | :---: | :---: | :---:
-*69569* |*85797* |*111692* |*116676* |*116678*
+*5321* |*6055* |*7136* |*7635* |*7679*
 
 
-![dynamic_forecast][dynamic_forecast]
+![logistic_dead][logistic_dead]
 
 [stats]: stats.png
-[logistic]: logistic.png
-[dynamic_forecast]: dynamic_forecast.png
+[logistic_infected]: logistic_infected.png
+[logistic_dead]: logistic_dead.png

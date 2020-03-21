@@ -51,45 +51,37 @@ if __name__ == '__main__':
     time_to_2x = math.log(2) / math.log(1 + growth_rate[-1])
     time_to_10x = math.log(10) / math.log(1 + growth_rate[-1])
 
-    # dynamic forecast
-    infected_dyn_forecast = infected_list.copy()
-    infected_dyn_forecast_optimistic = infected_list.copy()
-    infected_dyn_forecast_super_optimistic = infected_list.copy()
-    dates_dyn_forecast = dates.copy()
+    dates_forecast = dates.copy()
 
-    # decreasing growth rates
-    slow = growth_rate.tolist().copy()
-    fast = growth_rate.tolist().copy()
-    super_fast = growth_rate.tolist().copy()
+    days_ahead = 30
 
-    N = 30
-    for i in range(N):
-        slow.append(slow[-1] - slow[-1] / (N * 2) * i)
-        fast.append(fast[-1] - fast[-1] / (N * 1.5) * i)
-        super_fast.append(super_fast[-1] - super_fast[-1] / (N * 1) * i)
-
-    for i in range(N):
-        infected_dyn_forecast.append(
-            infected_dyn_forecast[-1] * (1 + slow[i - N]))
-        infected_dyn_forecast_optimistic.append(
-            infected_dyn_forecast_optimistic[-1] * (1 + fast[i - N]))
-        infected_dyn_forecast_super_optimistic.append(
-            infected_dyn_forecast_super_optimistic[-1] * (1 + super_fast[i - N]))
-
-        dates_dyn_forecast.append(dates_dyn_forecast[-1] + timedelta(days=1))
+    for i in range(days_ahead):
+        dates_forecast.append(dates_forecast[-1] + timedelta(days=1))
 
     x = np.array(np.linspace(1, len(infected), len(infected), dtype=np.float))
-    xx = np.array(np.linspace(x[0], x[-1] + N, len(x) + N), dtype=np.float)
+    xx = np.array(np.linspace(x[0], x[-1] + days_ahead, len(x) + days_ahead), dtype=np.float)
+
+    # logistic fit infected
     popt, pcov = scipy.optimize.curve_fit(logistic, x, infected,
                                           p0=[2, 25, 1000],
                                           maxfev=1000)
-    logistic_forecast = logistic(xx, *popt)
+    logistic_infected_forecast = logistic(xx, *popt)
     errors = np.sqrt(np.diag(pcov))
-    nstd = 1
-    fit_up = popt + nstd * errors
-    fit_dw = popt - nstd * errors
-    fit_up_p = logistic(xx, *fit_up)
-    fit_dw_p = logistic(xx, *fit_dw)
+    fit_up = popt + errors
+    fit_dw = popt - errors
+    logistic_infected_fit_up_p = logistic(xx, *fit_up)
+    logistic_infected_fit_dw_p = logistic(xx, *fit_dw)
+
+    # logistic fit dead
+    popt, pcov = scipy.optimize.curve_fit(logistic, x, dead,
+                                          p0=[2, 25, 1000],
+                                          maxfev=1000)
+    logistic_dead_forecast = logistic(xx, *popt)
+    errors = np.sqrt(np.diag(pcov))
+    fit_up = popt + errors
+    fit_dw = popt - errors
+    logistic_dead_fit_up_p = logistic(xx, *fit_up)
+    logistic_dead_fit_dw_p = logistic(xx, *fit_dw)
 
     with open(pathlib.Path() / 'report' / 'report.md', 'w') as f:
         f.write("<div align='center'>\n\n")
@@ -124,47 +116,31 @@ if __name__ == '__main__':
         f.write(f"- *time to 10x* is {time_to_10x:.2f} days\n")
         f.write("![stats][stats]\n")
         f.write("\n")
-        f.write(f"##### Logistic fit forecast\n")
+        f.write(f"##### Logistic fit infected forecast\n")
         f.write("after 3 days | after 5 days | after 10 days | after 20 days | after 30 days\n")
         f.write(":---: | :---: | :---: | :---: | :---:\n")
-        f.write(f"*{int(logistic_forecast[-28])}* |")
-        f.write(f"*{int(logistic_forecast[-26])}* |")
-        f.write(f"*{int(logistic_forecast[-21])}* |")
-        f.write(f"*{int(logistic_forecast[-11])}* |")
-        f.write(f"*{int(logistic_forecast[-1])}*\n")
+        f.write(f"*{int(logistic_infected_forecast[-28])}* |")
+        f.write(f"*{int(logistic_infected_forecast[-26])}* |")
+        f.write(f"*{int(logistic_infected_forecast[-21])}* |")
+        f.write(f"*{int(logistic_infected_forecast[-11])}* |")
+        f.write(f"*{int(logistic_infected_forecast[-1])}*\n")
         f.write("\n")
-        f.write("\n![logistic][logistic]\n")
+        f.write("\n![logistic_infected][logistic_infected]\n")
         f.write("\n")
-        f.write(f"##### Dynamic forecast with a slow decreasing growth rate\n")
+        f.write(f"##### Logistic fit dead forecast\n")
         f.write("after 3 days | after 5 days | after 10 days | after 20 days | after 30 days\n")
         f.write(":---: | :---: | :---: | :---: | :---:\n")
-        f.write(f"*{int(infected_dyn_forecast[-28])}* |")
-        f.write(f"*{int(infected_dyn_forecast[-26])}* |")
-        f.write(f"*{int(infected_dyn_forecast[-21])}* |")
-        f.write(f"*{int(infected_dyn_forecast[-11])}* |")
-        f.write(f"*{int(infected_dyn_forecast[-1])}*\n")
-        f.write(f"##### Dynamic forecast with a fast decreasing growth rate\n")
-        f.write("after 3 days | after 5 days | after 10 days | after 20 days | after 30 days\n")
-        f.write(":---: | :---: | :---: | :---: | :---:\n")
-        f.write(f"*{int(infected_dyn_forecast_optimistic[-28])}* |")
-        f.write(f"*{int(infected_dyn_forecast_optimistic[-26])}* |")
-        f.write(f"*{int(infected_dyn_forecast_optimistic[-21])}* |")
-        f.write(f"*{int(infected_dyn_forecast_optimistic[-11])}* |")
-        f.write(f"*{int(infected_dyn_forecast_optimistic[-1])}*\n")
-        f.write(f"##### Dynamic forecast with a super fast decreasing growth rate\n")
-        f.write("after 3 days | after 5 days | after 10 days | after 20 days | after 30 days\n")
-        f.write(":---: | :---: | :---: | :---: | :---:\n")
-        f.write(f"*{int(infected_dyn_forecast_super_optimistic[-28])}* |")
-        f.write(f"*{int(infected_dyn_forecast_super_optimistic[-26])}* |")
-        f.write(f"*{int(infected_dyn_forecast_super_optimistic[-21])}* |")
-        f.write(f"*{int(infected_dyn_forecast_super_optimistic[-11])}* |")
-        f.write(f"*{int(infected_dyn_forecast_super_optimistic[-1])}*\n")
+        f.write(f"*{int(logistic_dead_forecast[-28])}* |")
+        f.write(f"*{int(logistic_dead_forecast[-26])}* |")
+        f.write(f"*{int(logistic_dead_forecast[-21])}* |")
+        f.write(f"*{int(logistic_dead_forecast[-11])}* |")
+        f.write(f"*{int(logistic_dead_forecast[-1])}*\n")
         f.write("\n")
-        f.write("\n![dynamic_forecast][dynamic_forecast]\n")
+        f.write("\n![logistic_dead][logistic_dead]\n")
         f.write("\n")
         f.write("[stats]: stats.png\n")
-        f.write("[logistic]: logistic.png\n")
-        f.write("[dynamic_forecast]: dynamic_forecast.png\n")
+        f.write("[logistic_infected]: logistic_infected.png\n")
+        f.write("[logistic_dead]: logistic_dead.png\n")
 
     plt.rc('lines', linewidth=3, markersize=8)
     plt.rc('font', size=12)
@@ -201,28 +177,21 @@ if __name__ == '__main__':
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
         fig.autofmt_xdate()
         ax.plot(dates, infected, 'o-', label='total infected')
-        ax.plot(dates_dyn_forecast, logistic_forecast, label='logistic forecast')
+        ax.plot(dates_forecast, logistic_infected_forecast, label='logistic forecast')
         ax.legend(loc='upper left')
-        ax.fill_between(dates_dyn_forecast, fit_up_p, fit_dw_p, alpha=.25, color='gray')
-        plt.savefig('report/logistic.png')
+        ax.fill_between(dates_forecast, logistic_infected_fit_up_p, logistic_infected_fit_dw_p,
+                        alpha=.25, color='gray')
+        plt.savefig('report/logistic_infected.png')
 
     with plt.xkcd():
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
-
         fig.autofmt_xdate()
-
-        ax.plot(dates_dyn_forecast, infected_dyn_forecast, '*-',
-                label='dynamic forecast\nw/ a slow decreasing growth rate (expected)')
-        ax.plot(dates_dyn_forecast, infected_dyn_forecast_optimistic, 's-',
-                label='dynamic forecast\nw/ a fast decreasing growth rate (optimistic)')
-        ax.plot(dates_dyn_forecast, infected_dyn_forecast_super_optimistic, 'v-',
-                label='dynamic forecast\nw/ a super fast decreasing growth rate (super optimistic)')
-        ax.plot(dates, infected, 'o-', label='actual')
-
-        ax.set_title(f'infected in the next {N} days')
+        ax.plot(dates, dead, 'o-', label='total dead')
+        ax.plot(dates_forecast, logistic_dead_forecast, label='logistic forecast')
         ax.legend(loc='upper left')
-
-        plt.savefig('report/dynamic_forecast.png')
+        ax.fill_between(dates_forecast, logistic_dead_fit_up_p, logistic_dead_fit_dw_p,
+                        alpha=.25, color='gray')
+        plt.savefig('report/logistic_dead.png')
 
     # regional analysis
     raw_data = requests.get(
