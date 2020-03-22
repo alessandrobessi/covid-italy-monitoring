@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-03-21
+# 2020-03-22
 CoVid-19 Puglia Monitoring
 </div>
 
-##### Total number of infected individuals is 675 (+94)
+##### Total number of infected individuals is 786 (+111)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*642* | *4* | *29*
-*(+91*) | *(+0*) | (*+3*)
+*748* | *7* | *31*
+*(+106*) | *(+3*) | (*+2*)
 
-*Total number of tested individuals is 5617 (+828)*
+*Total number of tested individuals is 6160 (+543)*
 ***
-##### Current number of infected individuals is 642 (+91)
+##### Current number of infected individuals is 748 (+106)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*209* |*33* |*400*
-*(+18*) |*(+2*) |*(+71*)
+*252* |*37* |*459*
+*(+43*) |*(+4*) |*(+59*)
 ***
-##### Growth rate is 0.16 (5 days smoothing is 0.25)
-- *time to 2x* is 4.62 days
-- *time to 10x* is 15.35 days
+##### Growth rate is 0.16 (5 days smoothing is 0.18)
+- *time to 2x* is 4.55 days
+- *time to 10x* is 15.12 days
 ![stats][stats]
 
 [stats]: stats_Puglia.png
