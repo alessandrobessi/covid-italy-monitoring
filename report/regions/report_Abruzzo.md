@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-03-24
+# 2020-03-25
 CoVid-19 Abruzzo Monitoring
 </div>
 
-##### Total number of infected individuals is 689 (+26)
+##### Total number of infected individuals is 813 (+124)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*622* | *21* | *46*
-*(+17*) | *(+1*) | (*+8*)
+*738* | *23* | *52*
+*(+116*) | *(+2*) | (*+6*)
 
-*Total number of tested individuals is 4294 (+620)*
+*Total number of tested individuals is 4982 (+688)*
 ***
-##### Current number of infected individuals is 622 (+17)
+##### Current number of infected individuals is 738 (+116)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*234* |*57* |*331*
-*(+6*) |*(+5*) |*(+6*)
+*248* |*59* |*431*
+*(+14*) |*(+2*) |*(+100*)
 ***
-##### Growth rate is 0.04 (5 days smoothing is 0.12)
-- *time to 2x* is 18.02 days
-- *time to 10x* is 59.86 days
+##### Growth rate is 0.18 (5 days smoothing is 0.13)
+- *time to 2x* is 4.19 days
+- *time to 10x* is 13.91 days
 ![stats][stats]
 
 [stats]: stats_Abruzzo.png
