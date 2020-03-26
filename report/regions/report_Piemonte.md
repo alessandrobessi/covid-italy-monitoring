@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-03-25
+# 2020-03-26
 CoVid-19 Piemonte Monitoring
 </div>
 
-##### Total number of infected individuals is 6024 (+509)
+##### Total number of infected individuals is 6534 (+510)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*5556* | *19* | *449*
-*(+432*) | *(+2*) | (*+75*)
+*5950* | *135* | *449*
+*(+394*) | *(+116*) | (*+0*)
 
-*Total number of tested individuals is 16655 (+1186)*
+*Total number of tested individuals is 18054 (+1399)*
 ***
-##### Current number of infected individuals is 5556 (+432)
+##### Current number of infected individuals is 5950 (+394)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*2544* |*381* |*2631*
-*(+140*) |*(+21*) |*(+271*)
+*2633* |*408* |*2909*
+*(+89*) |*(+27*) |*(+278*)
 ***
-##### Growth rate is 0.09 (5 days smoothing is 0.12)
-- *time to 2x* is 7.85 days
-- *time to 10x* is 26.08 days
+##### Growth rate is 0.08 (5 days smoothing is 0.12)
+- *time to 2x* is 8.53 days
+- *time to 10x* is 28.33 days
 ![stats][stats]
 
 [stats]: stats_Piemonte.png

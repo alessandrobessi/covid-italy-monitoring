@@ -6,6 +6,10 @@ A script to visualize some statistics, predictions, and charts about the CoVid-1
  Italy.
 </div>
 
+### Disclaimer
+
+Notwithstanding the nice fit I wouldn't trust such a logistic fit based prediction. Italy is moving at different speeds: northern regions are already in the mid stages of the epidemic process, while center and southern regions are still in the early stages. We should also consider the effects of the lockdown, which is a difficult-to-model "exogenous shock". To summarize, I suspect that the underlying dynamics is way more complex than the one implicitly assumed by the logistic fit. Moreover, apparently, the reported number of infected individuals is *highly* underestimated, since there are a lot of infected yet asymptomatic individuals that don't show up in the official statistics.
+
 ### Usage
 Install Humor Sans font (http://antiyawn.com/uploads/humorsans.html) and requirements
 ```shell script
