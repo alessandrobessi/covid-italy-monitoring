@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 19.78 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Calabria.png
+[infected_normalized]: infected_normalized_Calabria.png

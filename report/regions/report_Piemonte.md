@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 29.34 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Piemonte.png
+[infected_normalized]: infected_normalized_Piemonte.png

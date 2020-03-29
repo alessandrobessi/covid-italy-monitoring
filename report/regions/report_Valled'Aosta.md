@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 18.77 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Valled'Aosta.png
+[infected_normalized]: infected_normalized_Valled'Aosta.png

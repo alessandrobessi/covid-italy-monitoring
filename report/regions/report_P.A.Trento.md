@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 29.23 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_P.A.Trento.png
+[infected_normalized]: infected_normalized_P.A.Trento.png

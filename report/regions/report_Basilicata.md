@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 12.33 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Basilicata.png
+[infected_normalized]: infected_normalized_Basilicata.png

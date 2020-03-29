@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 41.71 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Lombardia.png
+[infected_normalized]: infected_normalized_Lombardia.png

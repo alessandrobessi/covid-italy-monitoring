@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 14.10 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Sardegna.png
+[infected_normalized]: infected_normalized_Sardegna.png

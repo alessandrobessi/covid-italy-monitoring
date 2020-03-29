@@ -23,7 +23,9 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 34.48 days
 ![stats][stats]
 
-##### Logistic fit infected forecast
+![infected_normalized][infected_normalized]
+
+##### Logistic fit infected
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
 *103232* |*109195* |*118327* |*123966* |*124877*
@@ -31,7 +33,7 @@ after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 
 ![logistic_infected][logistic_infected]
 
-##### Logistic fit dead forecast
+##### Logistic fit dead
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
 *11632* |*12535* |*13885* |*14639* |*14739*
@@ -52,6 +54,7 @@ after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 ![southern_regions][southern_regions]
 
 [stats]: stats.png
+[infected_normalized]: infected_normalized.png
 [logistic_infected]: logistic_infected.png
 [logistic_dead]: logistic_dead.png
 [northern_regions]: northern_regions.png

@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 26.30 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Lazio.png
+[infected_normalized]: infected_normalized_Lazio.png

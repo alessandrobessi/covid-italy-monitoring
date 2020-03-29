@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 19.06 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Molise.png
+[infected_normalized]: infected_normalized_Molise.png

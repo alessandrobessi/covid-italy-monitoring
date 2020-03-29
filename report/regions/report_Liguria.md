@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 50.41 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Liguria.png
+[infected_normalized]: infected_normalized_Liguria.png

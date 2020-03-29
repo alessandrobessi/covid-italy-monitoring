@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 25.08 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Umbria.png
+[infected_normalized]: infected_normalized_Umbria.png

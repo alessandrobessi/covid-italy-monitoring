@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 25.91 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Puglia.png
+[infected_normalized]: infected_normalized_Puglia.png

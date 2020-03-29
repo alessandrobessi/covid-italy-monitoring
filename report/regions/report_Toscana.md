@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 22.78 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_Toscana.png
+[infected_normalized]: infected_normalized_Toscana.png

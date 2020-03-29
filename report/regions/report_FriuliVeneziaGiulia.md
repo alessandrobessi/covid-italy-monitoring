@@ -23,4 +23,7 @@ hospitalized | in ICU | home isolation
 - *time to 10x* is 26.62 days
 ![stats][stats]
 
+![infected_normalized][infected_normalized]
+
 [stats]: stats_FriuliVeneziaGiulia.png
+[infected_normalized]: infected_normalized_FriuliVeneziaGiulia.png

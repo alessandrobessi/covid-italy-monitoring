@@ -45,6 +45,8 @@ if __name__ == '__main__':
     growth_rate = (infected[1:] - infected[:-1]) / infected[:-1]
     avg_growth_rate = moving_average(growth_rate, 5)
 
+    infected_norm = infected / tested
+
     # x = (1 + growth_rate)^t
     # log(x) = t * log(1 + growth_rate)
     # t = log(x) / log(1 + growth_rate)
@@ -116,7 +118,9 @@ if __name__ == '__main__':
         f.write(f"- *time to 10x* is {time_to_10x:.2f} days\n")
         f.write("![stats][stats]\n")
         f.write("\n")
-        f.write(f"##### Logistic fit infected forecast\n")
+        f.write("![infected_normalized][infected_normalized]\n")
+        f.write("\n")
+        f.write(f"##### Logistic fit infected\n")
         f.write("after 3 days | after 5 days | after 10 days | after 20 days | after 30 days\n")
         f.write(":---: | :---: | :---: | :---: | :---:\n")
         f.write(f"*{int(logistic_infected_forecast[-28])}* |")
@@ -127,7 +131,7 @@ if __name__ == '__main__':
         f.write("\n")
         f.write("\n![logistic_infected][logistic_infected]\n")
         f.write("\n")
-        f.write(f"##### Logistic fit dead forecast\n")
+        f.write(f"##### Logistic fit dead\n")
         f.write("after 3 days | after 5 days | after 10 days | after 20 days | after 30 days\n")
         f.write(":---: | :---: | :---: | :---: | :---:\n")
         f.write(f"*{int(logistic_dead_forecast[-28])}* |")
@@ -148,6 +152,7 @@ if __name__ == '__main__':
         f.write("\n![southern_regions][southern_regions]\n")
         f.write("\n")
         f.write("[stats]: stats.png\n")
+        f.write("[infected_normalized]: infected_normalized.png\n")
         f.write("[logistic_infected]: logistic_infected.png\n")
         f.write("[logistic_dead]: logistic_dead.png\n")
         f.write("[northern_regions]: northern_regions.png\n")
@@ -189,7 +194,7 @@ if __name__ == '__main__':
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
         fig.autofmt_xdate()
         ax.plot(dates, infected, 'o-', label='total infected')
-        ax.plot(dates_forecast, logistic_infected_forecast, label='logistic forecast')
+        ax.plot(dates_forecast, logistic_infected_forecast, label='logistic fit')
         ax.legend(loc='upper left')
         ax.fill_between(dates_forecast, logistic_infected_fit_up_p, logistic_infected_fit_dw_p,
                         alpha=.25, color='gray')
@@ -199,11 +204,18 @@ if __name__ == '__main__':
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
         fig.autofmt_xdate()
         ax.plot(dates, dead, 'o-', label='total dead')
-        ax.plot(dates_forecast, logistic_dead_forecast, label='logistic forecast')
+        ax.plot(dates_forecast, logistic_dead_forecast, label='logistic fit')
         ax.legend(loc='upper left')
         ax.fill_between(dates_forecast, logistic_dead_fit_up_p, logistic_dead_fit_dw_p,
                         alpha=.25, color='gray')
         plt.savefig('report/logistic_dead.png')
+
+    with plt.xkcd():
+        fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
+        fig.autofmt_xdate()
+        ax.plot(dates, infected_norm, 'o-', label='total infected / total tested')
+        ax.legend(loc='upper left')
+        plt.savefig('report/infected_normalized.png')
 
     # regional analysis
     raw_data = requests.get(
@@ -233,6 +245,8 @@ if __name__ == '__main__':
 
         infected = np.array(infected_list, dtype=np.float32)
         new_infected = infected[-1] - infected[-2]
+
+        infected_norm = infected / tested
 
         infected[infected < 1e-3] = 1e-1
         growth_rate = (infected[1:] - infected[:-1]) / infected[:-1]
@@ -284,7 +298,10 @@ if __name__ == '__main__':
             f.write(f"- *time to 10x* is {time_to_10x:.2f} days\n")
             f.write("![stats][stats]\n")
             f.write("\n")
+            f.write("![infected_normalized][infected_normalized]\n")
+            f.write("\n")
             f.write(f"[stats]: stats_{region.replace(' ', '')}.png\n")
+            f.write(f"[infected_normalized]: infected_normalized_{region.replace(' ', '')}.png\n")
 
         with plt.xkcd():
             fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(nrows=2, ncols=3,
@@ -316,6 +333,13 @@ if __name__ == '__main__':
             ax6.legend(loc='upper left')
 
             plt.savefig(f'report/regions/stats_{region.replace(" ", "")}.png')
+
+        with plt.xkcd():
+            fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
+            fig.autofmt_xdate()
+            ax.plot(dates, infected_norm, 'o-', label='total infected / total tested')
+            ax.legend(loc='upper left')
+            plt.savefig(f'report/regions/infected_normalized_{region.replace(" ", "")}.png')
 
     regions_classification = {
         'northern': ['Emilia Romagna', 'Friuli Venezia Giulia', 'Liguria', 'Lombardia',
