@@ -213,7 +213,7 @@ if __name__ == '__main__':
     with plt.xkcd():
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
         fig.autofmt_xdate()
-        ax.plot(dates, infected_norm, 'o-', label='total infected / total tested')
+        ax.plot(dates, infected_norm, 'o-', label='total infected normalized by total tested')
         ax.legend(loc='upper left')
         plt.savefig('report/infected_normalized.png')
 
@@ -337,7 +337,7 @@ if __name__ == '__main__':
         with plt.xkcd():
             fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
             fig.autofmt_xdate()
-            ax.plot(dates, infected_norm, 'o-', label='total infected / total tested')
+            ax.plot(dates, infected_norm, 'o-', label='total infected normalized by total tested')
             ax.legend(loc='upper left')
             plt.savefig(f'report/regions/infected_normalized_{region.replace(" ", "")}.png')
 
