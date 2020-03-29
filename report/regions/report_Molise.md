@@ -8,7 +8,7 @@ CoVid-19 Molise Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *100* | *18* | *9*
-*(+2*) | *(+2*) | (*+0*)
+*(2*) | *(2*) | (*0*)
 
 *Total number of tested individuals is 918 (+111)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *25* |*9* |*66*
-*(+-1*) |*(+0*) |*(+3*)
+*(-1*) |*(0*) |*(3*)
 ***
 ##### Growth rate is 0.03 (5 days smoothing is 0.15)
 - *time to 2x* is 21.66 days

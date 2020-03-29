@@ -8,7 +8,7 @@ CoVid-19 Campania Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *1556* | *86* | *117*
-*(+149*) | *(+10*) | (*+8*)
+*(149*) | *(10*) | (*8*)
 
 *Total number of tested individuals is 11805 (+1189)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *476* |*135* |*945*
-*(+13*) |*(+3*) |*(+133*)
+*(13*) |*(3*) |*(133*)
 ***
 ##### Growth rate is 0.10 (5 days smoothing is 0.10)
 - *time to 2x* is 6.95 days

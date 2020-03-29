@@ -8,7 +8,7 @@ CoVid-19 Friuli Venezia Giulia Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *1141* | *241* | *98*
-*(+21*) | *(+12*) | (*+11*)
+*(21*) | *(12*) | (*11*)
 
 *Total number of tested individuals is 13397 (+674)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *236* |*60* |*845*
-*(+13*) |*(+1*) |*(+7*)
+*(13*) |*(1*) |*(7*)
 ***
 ##### Growth rate is 0.03 (5 days smoothing is 0.08)
 - *time to 2x* is 22.97 days

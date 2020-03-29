@@ -8,7 +8,7 @@ CoVid-19 Veneto Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *7251* | *715* | *392*
-*(+338*) | *(+60*) | (*+30*)
+*(338*) | *(60*) | (*30*)
 
 *Total number of tested individuals is 94784 (+5404)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *1586* |*355* |*5310*
-*(+27*) |*(+11*) |*(+300*)
+*(27*) |*(11*) |*(300*)
 ***
 ##### Growth rate is 0.05 (5 days smoothing is 0.07)
 - *time to 2x* is 13.19 days

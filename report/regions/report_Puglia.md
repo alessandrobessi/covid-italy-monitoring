@@ -8,7 +8,7 @@ CoVid-19 Puglia Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *1432* | *31* | *86*
-*(+74*) | *(+2*) | (*+15*)
+*(74*) | *(2*) | (*15*)
 
 *Total number of tested individuals is 12361 (+861)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *559* |*99* |*774*
-*(+-4*) |*(+1*) |*(+77*)
+*(-4*) |*(1*) |*(77*)
 ***
 ##### Growth rate is 0.06 (5 days smoothing is 0.09)
 - *time to 2x* is 11.45 days

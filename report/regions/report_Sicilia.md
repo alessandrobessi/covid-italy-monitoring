@@ -8,7 +8,7 @@ CoVid-19 Sicilia Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *1330* | *65* | *65*
-*(+88*) | *(+5*) | (*+8*)
+*(88*) | *(5*) | (*8*)
 
 *Total number of tested individuals is 13814 (+718)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *451* |*71* |*808*
-*(+10*) |*(+0*) |*(+78*)
+*(10*) |*(0*) |*(78*)
 ***
 ##### Growth rate is 0.07 (5 days smoothing is 0.12)
 - *time to 2x* is 9.67 days

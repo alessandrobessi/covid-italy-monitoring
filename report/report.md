@@ -8,7 +8,7 @@ CoVid-19 Italy Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *73880* | *13030* | *10779*
-*(+3815*) | *(+646*) | (*+756*)
+*(3815*) | *(646*) | (*756*)
 
 *Total number of tested individuals is 454030 (+24504)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *27386* |*3906* |*42588*
-*(+710*) |*(+50*) |*(+3055*)
+*(710*) |*(50*) |*(3055*)
 ***
 ##### Growth rate is 0.06 (5 days smoothing is 0.07)
 - *time to 2x* is 12.63 days

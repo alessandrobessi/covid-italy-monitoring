@@ -8,7 +8,7 @@ CoVid-19 Piemonte Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *7268* | *254* | *684*
-*(+417*) | *(+51*) | (*+67*)
+*(417*) | *(51*) | (*67*)
 
 *Total number of tested individuals is 24058 (+2547)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *2985* |*443* |*3840*
-*(+-109*) |*(+4*) |*(+522*)
+*(-109*) |*(4*) |*(522*)
 ***
 ##### Growth rate is 0.07 (5 days smoothing is 0.08)
 - *time to 2x* is 10.28 days

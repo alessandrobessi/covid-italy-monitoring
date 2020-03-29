@@ -95,9 +95,9 @@ if __name__ == '__main__':
         f.write("Infected | Recovered | Dead\n")
         f.write(":---: | :---: | :---:\n")
         f.write(f"*{currently_infected[-1]}* | *{recovered[-1]}* | *{dead[-1]}*\n")
-        f.write(f"*(+{currently_infected[-1] - currently_infected[-2]}*) | *"
-                f"(+{recovered[-1] - recovered[-2]}*) | "
-                f"(*+{dead[-1] - dead[-2]}*)\n")
+        f.write(f"*({currently_infected[-1] - currently_infected[-2]}*) | *"
+                f"({recovered[-1] - recovered[-2]}*) | "
+                f"(*{dead[-1] - dead[-2]}*)\n")
         f.write(f"\n*Total number of tested individuals is {tested[-1]} (+"
                 f"{tested[-1] - tested[-2]})*\n")
         f.write("***\n")
@@ -108,9 +108,9 @@ if __name__ == '__main__':
         f.write(f"*{hospitalized[-1]}* |")
         f.write(f"*{icus[-1]}* |")
         f.write(f"*{isolated[-1]}*\n")
-        f.write(f"*(+{hospitalized[-1] - hospitalized[-2]}*) |")
-        f.write(f"*(+{icus[-1] - icus[-2]}*) |")
-        f.write(f"*(+{isolated[-1] - isolated[-2]}*)\n")
+        f.write(f"*({hospitalized[-1] - hospitalized[-2]}*) |")
+        f.write(f"*({icus[-1] - icus[-2]}*) |")
+        f.write(f"*({isolated[-1] - isolated[-2]}*)\n")
         f.write("***\n")
         f.write(f"##### Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is"
                 f" {avg_growth_rate[-1]:.2f})\n")
@@ -275,9 +275,9 @@ if __name__ == '__main__':
             f.write("Infected | Recovered | Dead\n")
             f.write(":---: | :---: | :---:\n")
             f.write(f"*{currently_infected[-1]}* | *{recovered[-1]}* | *{dead[-1]}*\n")
-            f.write(f"*(+{currently_infected[-1] - currently_infected[-2]}*) | *"
-                    f"(+{recovered[-1] - recovered[-2]}*) | "
-                    f"(*+{dead[-1] - dead[-2]}*)\n")
+            f.write(f"*({currently_infected[-1] - currently_infected[-2]}*) | *"
+                    f"({recovered[-1] - recovered[-2]}*) | "
+                    f"(*{dead[-1] - dead[-2]}*)\n")
             f.write(f"\n*Total number of tested individuals is {tested[-1]} (+"
                     f"{tested[-1] - tested[-2]})*\n")
             f.write("***\n")
@@ -288,9 +288,9 @@ if __name__ == '__main__':
             f.write(f"*{hospitalized[-1]}* |")
             f.write(f"*{icus[-1]}* |")
             f.write(f"*{isolated[-1]}*\n")
-            f.write(f"*(+{hospitalized[-1] - hospitalized[-2]}*) |")
-            f.write(f"*(+{icus[-1] - icus[-2]}*) |")
-            f.write(f"*(+{isolated[-1] - isolated[-2]}*)\n")
+            f.write(f"*({hospitalized[-1] - hospitalized[-2]}*) |")
+            f.write(f"*({icus[-1] - icus[-2]}*) |")
+            f.write(f"*({isolated[-1] - isolated[-2]}*)\n")
             f.write("***\n")
             f.write(f"##### Growth rate is {growth_rate[-1]:.2f} (5 days smoothing is"
                     f" {avg_growth_rate[-1]:.2f})\n")

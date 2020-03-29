@@ -8,7 +8,7 @@ CoVid-19 Umbria Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *897* | *95* | *31*
-*(+-1*) | *(+52*) | (*+3*)
+*(-1*) | *(52*) | (*3*)
 
 *Total number of tested individuals is 7685 (+657)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *166* |*46* |*685*
-*(+7*) |*(+2*) |*(+-10*)
+*(7*) |*(2*) |*(-10*)
 ***
 ##### Growth rate is 0.06 (5 days smoothing is 0.10)
 - *time to 2x* is 12.78 days

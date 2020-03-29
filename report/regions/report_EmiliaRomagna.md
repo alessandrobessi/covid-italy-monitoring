@@ -8,7 +8,7 @@ CoVid-19 Emilia Romagna Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *10535* | *1141* | *1443*
-*(+571*) | *(+66*) | (*+99*)
+*(571*) | *(66*) | (*99*)
 
 *Total number of tested individuals is 52991 (+0)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *3769* |*333* |*6433*
-*(+74*) |*(+17*) |*(+480*)
+*(74*) |*(17*) |*(480*)
 ***
 ##### Growth rate is 0.06 (5 days smoothing is 0.07)
 - *time to 2x* is 12.01 days

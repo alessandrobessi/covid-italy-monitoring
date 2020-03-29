@@ -8,7 +8,7 @@ CoVid-19 Sardegna Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *582* | *29* | *27*
-*(+13*) | *(+0*) | (*+1*)
+*(13*) | *(0*) | (*1*)
 
 *Total number of tested individuals is 4598 (+373)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *105* |*23* |*454*
-*(+10*) |*(+1*) |*(+2*)
+*(10*) |*(1*) |*(2*)
 ***
 ##### Growth rate is 0.02 (5 days smoothing is 0.09)
 - *time to 2x* is 31.24 days

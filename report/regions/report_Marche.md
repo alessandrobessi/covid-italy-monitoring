@@ -8,7 +8,7 @@ CoVid-19 Marche Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *3160* | *12* | *386*
-*(+161*) | *(+2*) | (*+22*)
+*(161*) | *(2*) | (*22*)
 
 *Total number of tested individuals is 10431 (+547)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *1000* |*168* |*1992*
-*(+13*) |*(+2*) |*(+146*)
+*(13*) |*(2*) |*(146*)
 ***
 ##### Growth rate is 0.05 (5 days smoothing is 0.05)
 - *time to 2x* is 12.98 days

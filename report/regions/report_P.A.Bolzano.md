@@ -8,7 +8,7 @@ CoVid-19 P.A. Bolzano Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *1034* | *116* | *64*
-*(+105*) | *(+0*) | (*+0*)
+*(105*) | *(0*) | (*0*)
 
 *Total number of tested individuals is 10137 (+969)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *234* |*56* |*744*
-*(+9*) |*(+5*) |*(+91*)
+*(9*) |*(5*) |*(91*)
 ***
 ##### Growth rate is 0.09 (5 days smoothing is 0.09)
 - *time to 2x* is 7.66 days

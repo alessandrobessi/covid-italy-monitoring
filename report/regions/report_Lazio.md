@@ -8,7 +8,7 @@ CoVid-19 Lazio Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *2362* | *208* | *136*
-*(+181*) | *(+8*) | (*+12*)
+*(181*) | *(8*) | (*12*)
 
 *Total number of tested individuals is 27744 (+565)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *1062* |*133* |*1167*
-*(+77*) |*(+0*) |*(+104*)
+*(77*) |*(0*) |*(104*)
 ***
 ##### Growth rate is 0.08 (5 days smoothing is 0.09)
 - *time to 2x* is 8.98 days

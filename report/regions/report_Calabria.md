@@ -8,7 +8,7 @@ CoVid-19 Calabria Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *577* | *12* | *25*
-*(+54*) | *(+1*) | (*+4*)
+*(54*) | *(1*) | (*4*)
 
 *Total number of tested individuals is 8485 (+725)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *124* |*19* |*434*
-*(+17*) |*(+-3*) |*(+40*)
+*(17*) |*(-3*) |*(40*)
 ***
 ##### Growth rate is 0.11 (5 days smoothing is 0.14)
 - *time to 2x* is 6.86 days

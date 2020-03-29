@@ -8,7 +8,7 @@ CoVid-19 P.A. Trento Monitoring
 Infected | Recovered | Dead
 :---: | :---: | :---:
 *1293* | *172* | *129*
-*(+59*) | *(+21*) | (*+9*)
+*(59*) | *(21*) | (*9*)
 
 *Total number of tested individuals is 5950 (+389)*
 ***
@@ -16,7 +16,7 @@ Infected | Recovered | Dead
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
 *356* |*75* |*862*
-*(+5*) |*(+3*) |*(+51*)
+*(5*) |*(3*) |*(51*)
 ***
 ##### Growth rate is 0.06 (5 days smoothing is 0.08)
 - *time to 2x* is 12.06 days
