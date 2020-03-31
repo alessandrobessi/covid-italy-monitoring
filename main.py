@@ -37,7 +37,7 @@ if __name__ == '__main__':
     hospitalized = np.array([d['ricoverati_con_sintomi'] for d in data], dtype=np.int32)
     icus = np.array([d['terapia_intensiva'] for d in data], dtype=np.int32)
     isolated = np.array([d['isolamento_domiciliare'] for d in data], dtype=np.int32)
-    currently_infected = np.array([d['totale_attualmente_positivi'] for d in data], dtype=np.int32)
+    currently_infected = np.array([d['totale_positivi'] for d in data], dtype=np.int32)
     tested = np.array([d['tamponi'] for d in data], dtype=np.int32)
 
     infected = np.array(infected_list, dtype=np.int32)
@@ -239,7 +239,7 @@ if __name__ == '__main__':
         hospitalized = np.array([d['ricoverati_con_sintomi'] for d in region_data], dtype=np.int32)
         icus = np.array([d['terapia_intensiva'] for d in region_data], dtype=np.int32)
         isolated = np.array([d['isolamento_domiciliare'] for d in region_data], dtype=np.int32)
-        currently_infected = np.array([d['totale_attualmente_positivi'] for d in region_data],
+        currently_infected = np.array([d['totale_positivi'] for d in region_data],
                                       dtype=np.int32)
         tested = np.array([d['tamponi'] for d in region_data], dtype=np.int32)
 
