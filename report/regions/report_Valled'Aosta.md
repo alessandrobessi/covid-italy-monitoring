@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-03-31
+# 2020-04-01
 CoVid-19 Valle d'Aosta Monitoring
 </div>
 
-##### Total number of infected individuals is 628 (+44)
+##### Total number of infected individuals is 631 (+3)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*552* | *20* | *56*
-*(34*) | *(4*) | (*6*)
+*540* | *32* | *59*
+*(-12*) | *(12*) | (*3*)
 
-*Total number of tested individuals is 1582 (+46)*
+*Total number of tested individuals is 1717 (+135)*
 ***
-##### Current number of infected individuals is 552 (+34)
+##### Current number of infected individuals is 540 (+-12)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*91* |*26* |*435*
-*(-1*) |*(0*) |*(35*)
+*85* |*27* |*428*
+*(-6*) |*(1*) |*(-7*)
 ***
-##### Growth rate is 0.08 (5 days smoothing is 0.11)
-- *time to 2x* is 9.54 days
-- *time to 10x* is 31.70 days
+##### Growth rate is 0.00 (5 days smoothing is 0.09)
+- *time to 2x* is 145.45 days
+- *time to 10x* is 483.16 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
