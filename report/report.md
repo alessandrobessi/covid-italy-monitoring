@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-04-04
+# 2020-04-06
 CoVid-19 Italy Monitoring
 </div>
 
-##### Total number of infected individuals is 124632 (+4805)
+##### Total number of infected individuals is 132547 (+3599)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*88274* | *20996* | *15362*
-*(2886*) | *(1238*) | (*681*)
+*93187* | *22837* | *16523*
+*(1941*) | *(1022*) | (*636*)
 
-*Total number of tested individuals is 657224 (+37375)*
+*Total number of tested individuals is 721732 (+30271)*
 ***
-##### Current number of infected individuals is 88274 (+2886)
+##### Current number of infected individuals is 93187 (+1941)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*29010* |*3994* |*55270*
-*(269*) |*(-74*) |*(2691*)
+*28976* |*3898* |*60313*
+*(27*) |*(-79*) |*(1993*)
 ***
-##### Growth rate is 0.04 (5 days smoothing is 0.04)
-- *time to 2x* is 17.63 days
-- *time to 10x* is 58.57 days
+##### Growth rate is 0.03 (5 days smoothing is 0.04)
+- *time to 2x* is 25.18 days
+- *time to 10x* is 83.64 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
@@ -28,7 +28,7 @@ hospitalized | in ICU | home isolation
 ##### Logistic fit infected
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*128598* |*131788* |*136520* |*139505* |*140045*
+*135405* |*138201* |*142389* |*145109* |*145629*
 
 
 ![logistic_infected][logistic_infected]
@@ -36,7 +36,7 @@ after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 ##### Logistic fit dead
 after 3 days | after 5 days | after 10 days | after 20 days | after 30 days
 :---: | :---: | :---: | :---: | :---:
-*16480* |*17116* |*18058* |*18631* |*18725*
+*17428* |*17948* |*18714* |*19181* |*19260*
 
 
 ![logistic_dead][logistic_dead]
