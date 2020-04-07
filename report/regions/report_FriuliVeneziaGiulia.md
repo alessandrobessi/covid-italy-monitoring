@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-04-06
+# 2020-04-07
 CoVid-19 Friuli Venezia Giulia Monitoring
 </div>
 
-##### Total number of infected individuals is 2103 (+55)
+##### Total number of infected individuals is 2153 (+50)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*1396* | *549* | *158*
-*(33*) | *(18*) | (*4*)
+*1379* | *610* | *164*
+*(-17*) | *(61*) | (*6*)
 
-*Total number of tested individuals is 22272 (+620)*
+*Total number of tested individuals is 23536 (+1264)*
 ***
-##### Current number of infected individuals is 1396 (+33)
+##### Current number of infected individuals is 1379 (+-17)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*189* |*46* |*1161*
-*(4*) |*(-4*) |*(33*)
+*185* |*44* |*1150*
+*(-4*) |*(-2*) |*(-11*)
 ***
-##### Growth rate is 0.03 (5 days smoothing is 0.05)
-- *time to 2x* is 26.16 days
-- *time to 10x* is 86.89 days
+##### Growth rate is 0.02 (5 days smoothing is 0.04)
+- *time to 2x* is 29.50 days
+- *time to 10x* is 97.99 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]

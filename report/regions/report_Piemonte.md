@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-04-06
+# 2020-04-07
 CoVid-19 Piemonte Monitoring
 </div>
 
-##### Total number of infected individuals is 12924 (+562)
+##### Total number of infected individuals is 13343 (+419)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*10545* | *1128* | *1251*
-*(368*) | *(111*) | (*83*)
+*10704* | *1320* | *1319*
+*(159*) | *(192*) | (*68*)
 
-*Total number of tested individuals is 41123 (+2584)*
+*Total number of tested individuals is 44121 (+2998)*
 ***
-##### Current number of infected individuals is 10545 (+368)
+##### Current number of infected individuals is 10704 (+159)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*3484* |*438* |*6623*
-*(12*) |*(-6*) |*(362*)
+*3553* |*432* |*6719*
+*(69*) |*(-6*) |*(96*)
 ***
-##### Growth rate is 0.05 (5 days smoothing is 0.06)
-- *time to 2x* is 15.59 days
-- *time to 10x* is 51.79 days
+##### Growth rate is 0.03 (5 days smoothing is 0.05)
+- *time to 2x* is 21.72 days
+- *time to 10x* is 72.17 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
