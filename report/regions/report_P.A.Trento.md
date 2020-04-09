@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-04-08
+# 2020-04-09
 CoVid-19 P.A. Trento Monitoring
 </div>
 
-##### Total number of infected individuals is 2602 (+126)
+##### Total number of infected individuals is 2708 (+106)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*1940* | *407* | *255*
-*(50*) | *(65*) | (*11*)
+*1978* | *462* | *268*
+*(38*) | *(55*) | (*13*)
 
-*Total number of tested individuals is 13258 (+1228)*
+*Total number of tested individuals is 14338 (+1080)*
 ***
-##### Current number of infected individuals is 1940 (+50)
+##### Current number of infected individuals is 1978 (+38)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*354* |*77* |*1509*
-*(-6*) |*(-1*) |*(57*)
+*345* |*69* |*1564*
+*(-9*) |*(-8*) |*(55*)
 ***
-##### Growth rate is 0.05 (5 days smoothing is 0.04)
-- *time to 2x* is 13.96 days
-- *time to 10x* is 46.39 days
+##### Growth rate is 0.04 (5 days smoothing is 0.04)
+- *time to 2x* is 17.36 days
+- *time to 10x* is 57.67 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
