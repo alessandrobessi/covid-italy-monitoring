@@ -1,0 +1,30 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="tensorflow-gpu" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="pyspark-stubs==3.0.0.dev2" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="tensorflow.keras" />
+          <option value="tensorflow.function" />
+          <option value="tensorflow.GradientTape" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

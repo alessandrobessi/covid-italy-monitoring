@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-04-17
+# 2020-04-27
 CoVid-19 Liguria Monitoring
 </div>
 
-##### Total number of infected individuals is 6188 (+149)
+##### Total number of infected individuals is 7642 (+154)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*3459* | *1863* | *866*
-*(22*) | *(89*) | (*38*)
+*3580* | *2934* | *1128*
+*(100*) | *(40*) | (*14*)
 
-*Total number of tested individuals is 28181 (+1236)*
+*Total number of tested individuals is 44039 (+1432)*
 ***
-##### Current number of infected individuals is 3459 (+22)
+##### Current number of infected individuals is 3580 (+100)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*897* |*105* |*2457*
-*(-60*) |*(2*) |*(80*)
+*754* |*83* |*2743*
+*(6*) |*(1*) |*(93*)
 ***
 ##### Growth rate is 0.02 (5 days smoothing is 0.02)
-- *time to 2x* is 28.44 days
-- *time to 10x* is 94.47 days
+- *time to 2x* is 34.05 days
+- *time to 10x* is 113.11 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]

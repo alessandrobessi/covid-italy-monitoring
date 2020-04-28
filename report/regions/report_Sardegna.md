@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-04-17
+# 2020-04-27
 CoVid-19 Sardegna Monitoring
 </div>
 
-##### Total number of infected individuals is 1178 (+14)
+##### Total number of infected individuals is 1283 (+3)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*872* | *220* | *86*
-*(7*) | *(6*) | (*1*)
+*776* | *398* | *109*
+*(-7*) | *(10*) | (*0*)
 
-*Total number of tested individuals is 13304 (+508)*
+*Total number of tested individuals is 21395 (+294)*
 ***
-##### Current number of infected individuals is 872 (+7)
+##### Current number of infected individuals is 776 (+-7)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*113* |*23* |*736*
-*(4*) |*(-1*) |*(4*)
+*97* |*19* |*660*
+*(2*) |*(-1*) |*(-8*)
 ***
-##### Growth rate is 0.01 (5 days smoothing is 0.01)
-- *time to 2x* is 57.98 days
-- *time to 10x* is 192.59 days
+##### Growth rate is 0.00 (5 days smoothing is 0.01)
+- *time to 2x* is 296.09 days
+- *time to 10x* is 983.59 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
