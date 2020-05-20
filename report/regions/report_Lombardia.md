@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-05-07
+# 2020-05-19
 CoVid-19 Lombardia Monitoring
 </div>
 
-##### Total number of infected individuals is 80089 (+720)
+##### Total number of infected individuals is 85481 (+462)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*32015* | *33329* | *14745*
-*(262*) | *(324*) | (*134*)
+*27291* | *42593* | *15597*
+*(218*) | *(190*) | (*54*)
 
-*Total number of tested individuals is 455294 (+15488)*
+*Total number of tested individuals is 596355 (+14918)*
 ***
-##### Current number of infected individuals is 32015 (+262)
+##### Current number of infected individuals is 27291 (+218)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*5848* |*480* |*25687*
-*(-231*) |*(0*) |*(493*)
+*4426* |*244* |*22621*
+*(-56*) |*(-8*) |*(282*)
 ***
-##### Growth rate is 0.01 (5 days smoothing is 0.01)
-- *time to 2x* is 76.75 days
-- *time to 10x* is 254.97 days
+##### Growth rate is 0.01 (5 days smoothing is 0.00)
+- *time to 2x* is 127.90 days
+- *time to 10x* is 424.88 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]

@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-05-07
+# 2020-05-19
 CoVid-19 Basilicata Monitoring
 </div>
 
-##### Total number of infected individuals is 383 (+-16)
+##### Total number of infected individuals is 393 (+1)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*155* | *202* | *26*
-*(-17*) | *(0*) | (*1*)
+*84* | *282* | *27*
+*(-9*) | *(10*) | (*0*)
 
-*Total number of tested individuals is 16272 (+169)*
+*Total number of tested individuals is 23347 (+766)*
 ***
-##### Current number of infected individuals is 155 (+-17)
+##### Current number of infected individuals is 84 (+-9)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*48* |*2* |*105*
-*(1*) |*(-1*) |*(-17*)
+*26* |*1* |*57*
+*(-3*) |*(0*) |*(-6*)
 ***
-##### Growth rate is 0.10 (5 days smoothing is 0.05)
-- *time to 2x* is 7.27 days
-- *time to 10x* is 24.16 days
+##### Growth rate is 0.00 (5 days smoothing is 0.04)
+- *time to 2x* is 272.06 days
+- *time to 10x* is 903.76 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
