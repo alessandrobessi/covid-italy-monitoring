@@ -1,22 +1,22 @@
 <div align='center'>
 
-# 2020-06-03
+# 2020-06-07
 CoVid-19 Calabria Monitoring
 </div>
 
-##### Total number of infected individuals is 1158 (+0)
+##### Total number of infected individuals is 1159 (+0)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*110* | *951* | *97*
-*(-2*) | *(2*) | (*0*)
+*91* | *971* | *97*
+*(0*) | *(0*) | (*0*)
 
-*Total number of tested individuals is 72237 (+620)*
+*Total number of tested individuals is 76142 (+852)*
 ***
-##### Current number of infected individuals is 110 (+-2)
+##### Current number of infected individuals is 91 (+0)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*20* |*0* |*90*
-*(0*) |*(-1*) |*(-1*)
+*18* |*0* |*73*
+*(0*) |*(0*) |*(0*)
 ***
 ##### Growth rate is 0.10 (5 days smoothing is 0.10)
 - *time to 2x* is 7.27 days

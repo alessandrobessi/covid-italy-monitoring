@@ -1,22 +1,22 @@
 <div align='center'>
 
-# 2020-06-03
+# 2020-06-07
 CoVid-19 Umbria Monitoring
 </div>
 
-##### Total number of infected individuals is 1431 (+0)
+##### Total number of infected individuals is 1432 (+1)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*31* | *1324* | *76*
-*(0*) | *(0*) | (*0*)
+*29* | *1327* | *76*
+*(1*) | *(0*) | (*0*)
 
-*Total number of tested individuals is 72001 (+232)*
+*Total number of tested individuals is 76179 (+843)*
 ***
-##### Current number of infected individuals is 31 (+0)
+##### Current number of infected individuals is 29 (+1)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*15* |*2* |*14*
-*(0*) |*(0*) |*(0*)
+*10* |*2* |*17*
+*(-1*) |*(0*) |*(2*)
 ***
 ##### Growth rate is 0.10 (5 days smoothing is 0.10)
 - *time to 2x* is 7.27 days
