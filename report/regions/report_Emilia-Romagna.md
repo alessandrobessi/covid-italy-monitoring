@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-06-07
+# 2020-10-10
 CoVid-19 Emilia-Romagna Monitoring
 </div>
 
-##### Total number of infected individuals is 27908 (+14)
+##### Total number of infected individuals is 37297 (+383)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*2328* | *21405* | *4175*
-*(-88*) | *(98*) | (*4*)
+*5976* | *26827* | *4494*
+*(367*) | *(15*) | (*1*)
 
-*Total number of tested individuals is 355952 (+4806)*
+*Total number of tested individuals is 1282331 (+13779)*
 ***
-##### Current number of infected individuals is 2328 (+-88)
+##### Current number of infected individuals is 5976 (+367)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*245* |*32* |*2051*
-*(-11*) |*(-3*) |*(-74*)
+*241* |*16* |*5719*
+*(15*) |*(2*) |*(350*)
 ***
-##### Growth rate is 0.10 (5 days smoothing is 0.10)
-- *time to 2x* is 7.27 days
-- *time to 10x* is 24.16 days
+##### Growth rate is 0.01 (5 days smoothing is 0.01)
+- *time to 2x* is 67.15 days
+- *time to 10x* is 223.08 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
