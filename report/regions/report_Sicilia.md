@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-10-10
+# 2020-10-11
 CoVid-19 Sicilia Monitoring
 </div>
 
-##### Total number of infected individuals is 8997 (+285)
+##### Total number of infected individuals is 9294 (+297)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*4143* | *4519* | *335*
-*(242*) | *(41*) | (*2*)
+*4401* | *4557* | *336*
+*(258*) | *(38*) | (*1*)
 
-*Total number of tested individuals is 544425 (+7741)*
+*Total number of tested individuals is 548934 (+4509)*
 ***
-##### Current number of infected individuals is 4143 (+242)
+##### Current number of infected individuals is 4401 (+258)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*387* |*35* |*3721*
-*(11*) |*(0*) |*(231*)
+*388* |*38* |*3975*
+*(1*) |*(3*) |*(254*)
 ***
 ##### Growth rate is 0.03 (5 days smoothing is 0.03)
-- *time to 2x* is 21.53 days
-- *time to 10x* is 71.53 days
+- *time to 2x* is 21.34 days
+- *time to 10x* is 70.90 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
