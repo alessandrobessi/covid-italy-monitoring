@@ -102,7 +102,7 @@ if __name__ == '__main__':
     plt.rc('font', size=12)
 
     with plt.xkcd():
-        fig, ((ax1, ax2, ax3, ax4, ax5, ax6)) = plt.subplots(nrows=6, ncols=1, figsize=(30, 15))
+        fig, ((ax1, ax2, ax3, ax4, ax5, ax6)) = plt.subplots(nrows=6, ncols=1, figsize=(15, 30))
         fig.autofmt_xdate()
 
         ax1.stackplot(dates, dead, recovered, currently_infected,
