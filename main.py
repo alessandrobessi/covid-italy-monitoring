@@ -102,7 +102,7 @@ if __name__ == '__main__':
     plt.rc('font', size=12)
 
     with plt.xkcd():
-        fig, ((ax1, ax2, ax3, ax4, ax5, ax6)) = plt.subplots(nrows=6, ncols=1, figsize=(15, 30))
+        fig, ((ax1, ax2, ax3, ax4, ax5, ax6)) = plt.subplots(nrows=6, ncols=1, figsize=(10, 5))
         fig.autofmt_xdate()
 
         ax1.stackplot(dates, dead, recovered, currently_infected,
@@ -223,8 +223,8 @@ if __name__ == '__main__':
             f.write(f"[infected_normalized]: infected_normalized_{region.replace(' ', '')}.png\n")
 
         with plt.xkcd():
-            fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(nrows=2, ncols=3,
-                                                                   figsize=(15, 15))
+            fig, ((ax1, ax2, ax3, ax4, ax5, ax6)) = plt.subplots(nrows=6, ncols=1,
+                                                                   figsize=(10, 5))
             fig.autofmt_xdate()
 
             ax1.stackplot(dates, dead, recovered, currently_infected,
@@ -270,7 +270,7 @@ if __name__ == '__main__':
 
     for c, c_list in regions_classification.items():
         with plt.xkcd():
-            fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(15, 15))
+            fig, (ax1, ax2) = plt.subplots(nrows=2, ncols=1, figsize=(15, 15))
             fig.autofmt_xdate()
             for k, v in regions_dict.items():
                 if k in c_list:
