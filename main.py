@@ -15,10 +15,6 @@ def moving_average(a: np.array, n: int = 3) -> np.array:
     return ret[n - 1:] / n
 
 
-def logistic(x: np.array, a: float, b: float, c: float) -> np.array:
-    return c / (1 + np.exp(-(x - b) / a))
-
-
 if __name__ == '__main__':
     raw_data = requests.get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json'
                             '/dpc-covid19-ita-andamento-nazionale.json')
@@ -52,38 +48,6 @@ if __name__ == '__main__':
     # t = log(x) / log(1 + growth_rate)
     time_to_2x = math.log(2) / math.log(1 + growth_rate[-1])
     time_to_10x = math.log(10) / math.log(1 + growth_rate[-1])
-
-    dates_forecast = dates.copy()
-
-    days_ahead = 30
-
-    for i in range(days_ahead):
-        dates_forecast.append(dates_forecast[-1] + timedelta(days=1))
-
-    x = np.array(np.linspace(1, len(infected), len(infected), dtype=np.float))
-    xx = np.array(np.linspace(x[0], x[-1] + days_ahead, len(x) + days_ahead), dtype=np.float)
-
-    # logistic fit infected
-    popt, pcov = scipy.optimize.curve_fit(logistic, x, infected,
-                                          p0=[2, 25, 1000],
-                                          maxfev=1000)
-    logistic_infected_forecast = logistic(xx, *popt)
-    errors = np.sqrt(np.diag(pcov))
-    fit_up = popt + errors
-    fit_dw = popt - errors
-    logistic_infected_fit_up_p = logistic(xx, *fit_up)
-    logistic_infected_fit_dw_p = logistic(xx, *fit_dw)
-
-    # logistic fit dead
-    popt, pcov = scipy.optimize.curve_fit(logistic, x, dead,
-                                          p0=[2, 25, 1000],
-                                          maxfev=1000)
-    logistic_dead_forecast = logistic(xx, *popt)
-    errors = np.sqrt(np.diag(pcov))
-    fit_up = popt + errors
-    fit_dw = popt - errors
-    logistic_dead_fit_up_p = logistic(xx, *fit_up)
-    logistic_dead_fit_dw_p = logistic(xx, *fit_dw)
 
     with open(pathlib.Path() / 'report' / 'report.md', 'w') as f:
         f.write("<div align='center'>\n\n")
@@ -120,29 +84,6 @@ if __name__ == '__main__':
         f.write("\n")
         f.write("![infected_normalized][infected_normalized]\n")
         f.write("\n")
-        f.write(f"##### Logistic fit infected\n")
-        f.write("after 3 days | after 5 days | after 10 days | after 20 days | after 30 days\n")
-        f.write(":---: | :---: | :---: | :---: | :---:\n")
-        f.write(f"*{int(logistic_infected_forecast[-28])}* |")
-        f.write(f"*{int(logistic_infected_forecast[-26])}* |")
-        f.write(f"*{int(logistic_infected_forecast[-21])}* |")
-        f.write(f"*{int(logistic_infected_forecast[-11])}* |")
-        f.write(f"*{int(logistic_infected_forecast[-1])}*\n")
-        f.write("\n")
-        f.write("\n![logistic_infected][logistic_infected]\n")
-        f.write("\n")
-        f.write(f"##### Logistic fit dead\n")
-        f.write("after 3 days | after 5 days | after 10 days | after 20 days | after 30 days\n")
-        f.write(":---: | :---: | :---: | :---: | :---:\n")
-        f.write(f"*{int(logistic_dead_forecast[-28])}* |")
-        f.write(f"*{int(logistic_dead_forecast[-26])}* |")
-        f.write(f"*{int(logistic_dead_forecast[-21])}* |")
-        f.write(f"*{int(logistic_dead_forecast[-11])}* |")
-        f.write(f"*{int(logistic_dead_forecast[-1])}*\n")
-        f.write("\n")
-        f.write("\n![logistic_dead][logistic_dead]\n")
-        f.write("\n")
-        f.write("\n")
         f.write(f"##### Infected and dead in Italian regions\n")
         f.write("\n")
         f.write("\n![northern_regions][northern_regions]\n")
@@ -153,8 +94,6 @@ if __name__ == '__main__':
         f.write("\n")
         f.write("[stats]: stats.png\n")
         f.write("[infected_normalized]: infected_normalized.png\n")
-        f.write("[logistic_infected]: logistic_infected.png\n")
-        f.write("[logistic_dead]: logistic_dead.png\n")
         f.write("[northern_regions]: northern_regions.png\n")
         f.write("[center_regions]: center_regions.png\n")
         f.write("[southern_regions]: southern_regions.png\n")
@@ -163,7 +102,7 @@ if __name__ == '__main__':
     plt.rc('font', size=12)
 
     with plt.xkcd():
-        fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(nrows=2, ncols=3, figsize=(15, 15))
+        fig, ((ax1, ax2, ax3, ax4, ax5, ax6)) = plt.subplots(nrows=6, ncols=1, figsize=(30, 15))
         fig.autofmt_xdate()
 
         ax1.stackplot(dates, dead, recovered, currently_infected,
@@ -189,26 +128,6 @@ if __name__ == '__main__':
         ax6.legend(loc='upper left')
 
         plt.savefig('report/stats.png')
-
-    with plt.xkcd():
-        fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
-        fig.autofmt_xdate()
-        ax.plot(dates, infected, 'o-', label='total infected')
-        ax.plot(dates_forecast, logistic_infected_forecast, label='logistic fit')
-        ax.legend(loc='upper left')
-        ax.fill_between(dates_forecast, logistic_infected_fit_up_p, logistic_infected_fit_dw_p,
-                        alpha=.25, color='gray')
-        plt.savefig('report/logistic_infected.png')
-
-    with plt.xkcd():
-        fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
-        fig.autofmt_xdate()
-        ax.plot(dates, dead, 'o-', label='total dead')
-        ax.plot(dates_forecast, logistic_dead_forecast, label='logistic fit')
-        ax.legend(loc='upper left')
-        ax.fill_between(dates_forecast, logistic_dead_fit_up_p, logistic_dead_fit_dw_p,
-                        alpha=.25, color='gray')
-        plt.savefig('report/logistic_dead.png')
 
     with plt.xkcd():
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))

@@ -1,26 +1,26 @@
 <div align='center'>
 
-# 2020-10-11
+# 2020-10-24
 CoVid-19 Marche Monitoring
 </div>
 
-##### Total number of infected individuals is 8593 (+108)
+##### Total number of infected individuals is 10919 (+274)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*1303* | *6298* | *992*
-*(100*) | *(8*) | (*0*)
+*3299* | *6619* | *1001*
+*(250*) | *(23*) | (*1*)
 
-*Total number of tested individuals is 268395 (+2385)*
+*Total number of tested individuals is 299892 (+2713)*
 ***
-##### Current number of infected individuals is 1303 (+100)
+##### Current number of infected individuals is 3299 (+250)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*44* |*6* |*1253*
-*(3*) |*(3*) |*(94*)
+*178* |*23* |*3098*
+*(26*) |*(1*) |*(223*)
 ***
-##### Growth rate is 0.01 (5 days smoothing is 0.01)
-- *time to 2x* is 54.80 days
-- *time to 10x* is 182.05 days
+##### Growth rate is 0.03 (5 days smoothing is 0.03)
+- *time to 2x* is 27.27 days
+- *time to 10x* is 90.60 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
