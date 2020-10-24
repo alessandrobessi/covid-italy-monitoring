@@ -224,7 +224,7 @@ if __name__ == '__main__':
 
         with plt.xkcd():
             fig, ((ax1, ax2, ax3, ax4, ax5, ax6)) = plt.subplots(nrows=6, ncols=1,
-                                                                   figsize=(10, 5))
+                                                                   figsize=(10, 20))
             fig.autofmt_xdate()
 
             ax1.stackplot(dates, dead, recovered, currently_infected,
