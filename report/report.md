@@ -12,7 +12,7 @@ Infected | Recovered | Dead
 
 *Total number of tested individuals is 14654002 (+161880)*
 
-*Infected / Tested ratio is 0.13
+*Infected / Tested ratio is 0.13*
 ##### Current number of infected individuals is 222241 (+19059)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:

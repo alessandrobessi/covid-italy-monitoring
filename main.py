@@ -64,7 +64,7 @@ if __name__ == '__main__':
                 f"(*{dead[-1] - dead[-2]}*)\n")
         f.write(f"\n*Total number of tested individuals is {tested[-1]} (+"
                 f"{tested[-1] - tested[-2]})*\n")
-        f.write(f"\n*Infected / Tested ratio is {np.round(infected_norm[-1], 2)}\n")
+        f.write(f"\n*Infected / Tested ratio is {np.round(infected_norm[-1], 2)}*\n")
         f.write(
             f"##### Current number of infected individuals is {currently_infected[-1]} (+{currently_infected[-1] - currently_infected[-2]})\n")
         f.write("hospitalized | in ICU | home isolation\n")
@@ -128,7 +128,7 @@ if __name__ == '__main__':
     with plt.xkcd():
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
         fig.autofmt_xdate()
-        ax.plot(dates[1:], infected_norm, 'o-', label='total infected normalized by total tested')
+        ax.plot(dates[1:], infected_norm, 'o-', label='infected / tested ratio')
         ax.legend(loc='upper left')
         plt.savefig('report/infected_normalized.png')
 
@@ -161,7 +161,7 @@ if __name__ == '__main__':
         infected = np.array(infected_list, dtype=np.float32)
         new_infected = infected[-1] - infected[-2]
 
-        infected_norm = infected / tested
+        infected_norm = (infected[1:] - infected[:-1]) / (tested[1:] - tested[:-1])
 
         infected[infected < 1e-3] = 1e-1
         growth_rate = (infected[1:] - infected[:-1]) / infected[:-1]
@@ -195,7 +195,7 @@ if __name__ == '__main__':
                     f"(*{dead[-1] - dead[-2]}*)\n")
             f.write(f"\n*Total number of tested individuals is {tested[-1]} (+"
                     f"{tested[-1] - tested[-2]})*\n")
-            f.write("***\n")
+            f.write(f"\n*Infected / Tested ratio is {np.round(infected_norm[-1], 2)}*\n")
             f.write(
                 f"##### Current number of infected individuals is {currently_infected[-1]} (+{currently_infected[-1] - currently_infected[-2]})\n")
             f.write("hospitalized | in ICU | home isolation\n")
@@ -219,7 +219,7 @@ if __name__ == '__main__':
             f.write(f"[infected_normalized]: infected_normalized_{region.replace(' ', '')}.png\n")
 
         with plt.xkcd():
-            fig, ((ax1, ax2, ax3, ax4, ax5, ax6)) = plt.subplots(nrows=6, ncols=1,
+            fig, ((ax1, ax2, ax4, ax5, ax6)) = plt.subplots(nrows=5, ncols=1,
                                                                    figsize=(10, 20))
             fig.autofmt_xdate()
 
@@ -229,11 +229,6 @@ if __name__ == '__main__':
 
             ax2.plot(dates, infected, 'o-', label='total infected')
             ax2.legend(loc='upper left')
-
-            ax3.plot(dates, infected, 'o-', label='total infected\nin log scale')
-            ax3.set_yscale('log')
-            ax3.set_ylim(bottom=1)
-            ax3.legend(loc='upper left')
 
             ax4.plot(dates[1:], growth_rate, 'o-', label='growth rate')
             ax4.plot(dates[5:], avg_growth_rate, label='5 days smoothing')
@@ -252,7 +247,7 @@ if __name__ == '__main__':
         with plt.xkcd():
             fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
             fig.autofmt_xdate()
-            ax.plot(dates, infected_norm, 'o-', label='total infected normalized by total tested')
+            ax.plot(dates[1:], infected_norm, 'o-', label='infected / tested ratio')
             ax.legend(loc='upper left')
             plt.savefig(f'report/regions/infected_normalized_{region.replace(" ", "")}.png')
 
