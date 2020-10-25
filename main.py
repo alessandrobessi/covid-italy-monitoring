@@ -41,7 +41,7 @@ if __name__ == '__main__':
     growth_rate = (infected[1:] - infected[:-1]) / infected[:-1]
     avg_growth_rate = moving_average(growth_rate, 5)
 
-    infected_norm = infected[1:] - infected[:-1] / tested[1:] - tested[:-1]
+    infected_norm = (infected[1:] - infected[:-1]) / (tested[1:] - tested[:-1])
 
     # x = (1 + growth_rate)^t
     # log(x) = t * log(1 + growth_rate)
