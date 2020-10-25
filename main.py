@@ -64,8 +64,7 @@ if __name__ == '__main__':
                 f"(*{dead[-1] - dead[-2]}*)\n")
         f.write(f"\n*Total number of tested individuals is {tested[-1]} (+"
                 f"{tested[-1] - tested[-2]})*\n")
-        f.write(f"\n*Infected / Tested ratio is {infected_norm[-1]}")
-        f.write("***\n")
+        f.write(f"\n*Infected / Tested ratio is {np.round(infected_norm[-1], 2)}\n")
         f.write(
             f"##### Current number of infected individuals is {currently_infected[-1]} (+{currently_infected[-1] - currently_infected[-2]})\n")
         f.write("hospitalized | in ICU | home isolation\n")
@@ -103,7 +102,7 @@ if __name__ == '__main__':
     plt.rc('font', size=12)
 
     with plt.xkcd():
-        fig, ((ax1, ax2, ax3, ax4, ax5, ax6)) = plt.subplots(nrows=6, ncols=1, figsize=(10, 20))
+        fig, ((ax1, ax2, ax4, ax5, ax6)) = plt.subplots(nrows=5, ncols=1, figsize=(10, 20))
         fig.autofmt_xdate()
 
         ax1.stackplot(dates, dead, recovered, currently_infected,
@@ -112,10 +111,6 @@ if __name__ == '__main__':
 
         ax2.plot(dates, infected, 'o-', label='total infected')
         ax2.legend(loc='upper left')
-
-        ax3.plot(dates, infected, 'o-', label='total infected\nin log scale')
-        ax3.set_yscale('log')
-        ax3.legend(loc='upper left')
 
         ax4.plot(dates[1:], growth_rate, 'o-', label='growth rate')
         ax4.plot(dates[5:], avg_growth_rate, label='5 days smoothing')
