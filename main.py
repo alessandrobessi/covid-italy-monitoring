@@ -41,7 +41,7 @@ if __name__ == '__main__':
     growth_rate = (infected[1:] - infected[:-1]) / infected[:-1]
     avg_growth_rate = moving_average(growth_rate, 5)
 
-    infected_norm = infected / tested
+    infected_norm = infected[1:] - infected[:-1] / tested[1:] - tested[:-1]
 
     # x = (1 + growth_rate)^t
     # log(x) = t * log(1 + growth_rate)
@@ -64,6 +64,7 @@ if __name__ == '__main__':
                 f"(*{dead[-1] - dead[-2]}*)\n")
         f.write(f"\n*Total number of tested individuals is {tested[-1]} (+"
                 f"{tested[-1] - tested[-2]})*\n")
+        f.write(f"\n*Infected / Tested ratio is {infected_norm[-1]}")
         f.write("***\n")
         f.write(
             f"##### Current number of infected individuals is {currently_infected[-1]} (+{currently_infected[-1] - currently_infected[-2]})\n")
@@ -132,7 +133,7 @@ if __name__ == '__main__':
     with plt.xkcd():
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 15))
         fig.autofmt_xdate()
-        ax.plot(dates, infected_norm, 'o-', label='total infected normalized by total tested')
+        ax.plot(dates[1:], infected_norm, 'o-', label='total infected normalized by total tested')
         ax.legend(loc='upper left')
         plt.savefig('report/infected_normalized.png')
 
