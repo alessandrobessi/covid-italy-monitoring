@@ -1,27 +1,27 @@
 <div align='center'>
 
-# 2020-10-25
+# 2020-10-26
 CoVid-19 Italy Monitoring
 </div>
 
-##### Total number of infected individuals is 525782 (+21273)
+##### Total number of infected individuals is 542789 (+17007)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*222241* | *266203* | *37338*
-*(19059*) | *(2086*) | (*128*)
+*236684* | *268626* | *37479*
+*(14443*) | *(2423*) | (*141*)
 
-*Total number of tested individuals is 14654002 (+161880)*
+*Total number of tested individuals is 14778688 (+124686)*
 
-*Infected / Tested ratio is 0.13*
-##### Current number of infected individuals is 222241 (+19059)
+*Infected / Tested ratio is 0.14*
+##### Current number of infected individuals is 236684 (+14443)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*12006* |*1208* |*209027*
-*(719*) |*(80*) |*(18260*)
+*12997* |*1284* |*222403*
+*(991*) |*(76*) |*(13376*)
 ***
-##### Growth rate is 0.04 (5 days smoothing is 0.04)
-- *time to 2x* is 16.78 days
-- *time to 10x* is 55.75 days
+##### Growth rate is 0.03 (5 days smoothing is 0.04)
+- *time to 2x* is 21.77 days
+- *time to 10x* is 72.33 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]

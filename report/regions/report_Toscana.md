@@ -1,27 +1,27 @@
 <div align='center'>
 
-# 2020-10-25
+# 2020-10-26
 CoVid-19 Toscana Monitoring
 </div>
 
-##### Total number of infected individuals is 31290 (+1863)
+##### Total number of infected individuals is 33461 (+2171)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*17320* | *12708* | *1262*
-*(1632*) | *(217*) | (*14*)
+*19376* | *12810* | *1275*
+*(2056*) | *(102*) | (*13*)
 
-*Total number of tested individuals is 1000835 (+13811)*
+*Total number of tested individuals is 1013957 (+13122)*
 
-*Infected / Tested ratio is 0.13*
-##### Current number of infected individuals is 17320 (+1632)
+*Infected / Tested ratio is 0.17*
+##### Current number of infected individuals is 19376 (+2056)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*714* |*111* |*16495*
-*(74*) |*(24*) |*(1534*)
+*779* |*110* |*18487*
+*(65*) |*(-1*) |*(1992*)
 ***
-##### Growth rate is 0.06 (5 days smoothing is 0.05)
-- *time to 2x* is 11.29 days
-- *time to 10x* is 37.51 days
+##### Growth rate is 0.07 (5 days smoothing is 0.06)
+- *time to 2x* is 10.33 days
+- *time to 10x* is 34.32 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
