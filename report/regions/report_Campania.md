@@ -1,27 +1,27 @@
 <div align='center'>
 
-# 2020-10-26
+# 2020-10-27
 CoVid-19 Campania Monitoring
 </div>
 
-##### Total number of infected individuals is 40594 (+1981)
+##### Total number of infected individuals is 43355 (+2761)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*30675* | *9332* | *587*
-*(1955*) | *(10*) | (*16*)
+*32841* | *9907* | *607*
+*(2166*) | *(575*) | (*20*)
 
-*Total number of tested individuals is 871772 (+11569)*
+*Total number of tested individuals is 886553 (+14781)*
 
-*Infected / Tested ratio is 0.17*
-##### Current number of infected individuals is 30675 (+1955)
+*Infected / Tested ratio is 0.19*
+##### Current number of infected individuals is 32841 (+2166)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*1191* |*123* |*29361*
-*(40*) |*(10*) |*(1905*)
+*1210* |*140* |*31491*
+*(19*) |*(17*) |*(2130*)
 ***
-##### Growth rate is 0.05 (5 days smoothing is 0.06)
-- *time to 2x* is 13.85 days
-- *time to 10x* is 46.02 days
+##### Growth rate is 0.07 (5 days smoothing is 0.06)
+- *time to 2x* is 10.53 days
+- *time to 10x* is 34.99 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]

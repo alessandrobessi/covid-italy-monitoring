@@ -1,27 +1,27 @@
 <div align='center'>
 
-# 2020-10-26
+# 2020-10-27
 CoVid-19 Molise Monitoring
 </div>
 
-##### Total number of infected individuals is 1319 (+101)
+##### Total number of infected individuals is 1385 (+66)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*640* | *651* | *28*
-*(90*) | *(11*) | (*0*)
+*692* | *664* | *29*
+*(52*) | *(13*) | (*1*)
 
-*Total number of tested individuals is 59951 (+556)*
+*Total number of tested individuals is 60629 (+678)*
 
-*Infected / Tested ratio is 0.18*
-##### Current number of infected individuals is 640 (+90)
+*Infected / Tested ratio is 0.1*
+##### Current number of infected individuals is 692 (+52)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*19* |*3* |*618*
-*(-1*) |*(1*) |*(90*)
+*17* |*4* |*671*
+*(-2*) |*(1*) |*(53*)
 ***
-##### Growth rate is 0.08 (5 days smoothing is 0.05)
-- *time to 2x* is 8.70 days
-- *time to 10x* is 28.90 days
+##### Growth rate is 0.05 (5 days smoothing is 0.05)
+- *time to 2x* is 14.20 days
+- *time to 10x* is 47.16 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]

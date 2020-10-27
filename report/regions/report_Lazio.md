@@ -1,27 +1,27 @@
 <div align='center'>
 
-# 2020-10-26
+# 2020-10-27
 CoVid-19 Lazio Monitoring
 </div>
 
-##### Total number of infected individuals is 35936 (+1698)
+##### Total number of infected individuals is 37929 (+1993)
 Infected | Recovered | Dead
 :---: | :---: | :---:
-*24406* | *10414* | *1116*
-*(1591*) | *(91*) | (*16*)
+*26142* | *10648* | *1139*
+*(1736*) | *(234*) | (*23*)
 
-*Total number of tested individuals is 1313163 (+18991)*
+*Total number of tested individuals is 1338385 (+25222)*
 
-*Infected / Tested ratio is 0.09*
-##### Current number of infected individuals is 24406 (+1591)
+*Infected / Tested ratio is 0.08*
+##### Current number of infected individuals is 26142 (+1736)
 hospitalized | in ICU | home isolation
 :---: | :---: | :---:
-*1599* |*158* |*22649*
-*(123*) |*(12*) |*(1456*)
+*1632* |*166* |*24344*
+*(33*) |*(8*) |*(1695*)
 ***
-##### Growth rate is 0.05 (5 days smoothing is 0.05)
-- *time to 2x* is 14.32 days
-- *time to 10x* is 47.57 days
+##### Growth rate is 0.06 (5 days smoothing is 0.05)
+- *time to 2x* is 12.84 days
+- *time to 10x* is 42.66 days
 ![stats][stats]
 
 ![infected_normalized][infected_normalized]
